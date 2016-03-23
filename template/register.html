@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>注册页面</title>
+    <meta name="description" content="影视合同生成注册页面">
+    <meta name="author" content="xiao kai, peng">
+
+    <!-- 导入Roboto字体
+    <link rel="stylesheet" href="http://fonts.useso.com/css?family=Roboto:400,100,300,500"> -->
+    <!-- 导入noto sans sc字体
+    <link rel="stylesheet" href="http://fonts.useso.com/earlyaccess/notosanssc.css"> -->
+
+	<link href="https://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="./style.css">
+
+    <!-- 加载各种icon -->
+    <link rel="icon" href="./favicon.ico">
+    <link rel="shortcut icon" href="./favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="./favicon.ico">
+
+
+</head>
+
+<body>
+	<header>
+		<!-- 置顶导航 -->
+		<nav role="navigation" class="navbar navbar-static-top">
+			<div class="container">
+				<a class="brand" href="#">
+					<img alt="Brand" src="./favicon.ico">
+				</a>
+
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main_top_navbar" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+
+				<div class="collapse navbar-collapse" id="main_top_navbar">
+					<!-- 以下填充置顶导航中的链接 -->
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="#">示例1</a>
+						</li>
+						<li>
+							<a href="#">示例2</a>
+						</li>
+					</ul>
+
+					<!-- 这里是登录的按钮或者用户管理的下拉菜单 -->
+					<!-- 这里示例下拉菜单 -->
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="#">注册</a>
+						</li>
+						<li>
+							<span>/</span>
+						</li>
+						<li>
+							<a href="#">登录</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-8 col-sm-offset-2 hidden-xs">
+					<h1 class="default-h1"><strong>欢迎</strong>新用户！</h1>
+					<div>
+						<p>
+							我们为您提供<strong>专业的</strong>影视合同服务。
+						</p>
+						<p>
+							无论您是编剧、演员、还是导演，您都可以通过我们的网站<strong>免费</strong>生成为您<strong>量身定制的</strong>各种类型的合同。
+						</p>
+						<p>
+							另外，您也可以通过我们的<a href="#"><strong>邮箱</strong></a>获得更进一步的法律帮助。
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-sm-offset-3">
+					<div class="form-box">
+						<div class="form-top">
+							<div class="form-top-left">
+								<h3 class="default-h3">
+									请在这里注册
+								</h3>
+								<p>
+									填写几个简单的表单即可马上登陆
+								</p>
+							</div>
+							<div class="form-top-right">
+								<i class="fa fa-pencil"></i>
+							</div>
+						</div>
+						<div class="form-bottom">
+							<form role="form" action="" method="post" class="registration-form">
+								<div class="form-group">
+									<label for="regiser-account" class="sr-only">账号</label>
+									<input type="text" name="regiser-account" placeholder="请输入账号，以字母开头..." class="form-account form-control">
+								</div>
+								<div class="form-group">
+									<label for="regiser-password" class="sr-only">密码</label>
+									<input type="password" name="regiser-password" placeholder="请输入8至16位密码..." class="form-password form-control">
+								</div>
+								<div class="form-group">
+									<label for="regiser-duplicate-password" class="sr-only">请重复输入密码</label>
+									<input type="password" name="regiser-duplicate-password" placeholder="请重复输入密码..." class="form-duplicate-password form-control">
+								</div>
+								<div class="form-group">
+									<label for="regiser-email" class="sr-only">电子邮箱</label>
+									<input type="text" name="regiser-email" placeholder="请输入电子邮箱..." class="form-email form-control">
+								</div>
+								<button type="submit" class="btn">提交注册信息</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-8 col-sm-offset-2">
+					<div class="footer-border"></div>
+					<p><a href="#"><strong>联系我们</strong></a></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- 返回顶部悬浮按钮 -->
+	<span id="top-link-block" class="hidden">
+	    <a href="#top" class="well well-sm" onclick="$('html,body').animate({scrollTop:0},'fast');return false;">
+	        <i class="fa fa-arrow-up"></i>返回顶部
+	    </a>
+	</span>
+
+	<!-- 加载JS -->
+	<script src="https://cdn.bootcss.com/jquery/1.12.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="./script.js"></script>
+</body>
+</html>

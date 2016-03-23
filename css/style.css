@@ -1,0 +1,582 @@
+/* 默认参数 */
+
+body
+{
+    font-family: 'Roboto', 'Noto Sans SC', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 30px;
+
+    /* 用于绝对定位 */
+    position: relative;
+
+    text-align: center;
+
+    color: #fff;
+    background: -webkit-linear-gradient(#2482ac,#6162b8);
+    background:    -moz-linear-gradient(#2482ac,#6162b8);
+    background:     -ms-linear-gradient(#2482ac,#6162b8);
+    background:      -o-linear-gradient(#2482ac,#6162b8);
+    background:         linear-gradient(#2482ac,#6162b8);
+    background-color: #2482ac;
+    background-attachment: fixed;
+}
+
+/* 默认参数end */
+
+/* 默认链接风格 */
+
+a,
+a:hover,
+a:focus,
+.nav>li>a,
+.nav>li>a:focus,
+.nav>li>a:hover,
+.dropdown-menu>li>a,
+.dropdown-menu>li>a:focus,
+.dropdown-menu>li>a:hover
+{
+    -webkit-transition: all .3s;
+       -moz-transition: all .3s;
+        -ms-transition: all .3s;
+         -o-transition: all .3s;
+            transition: all .3s;
+    /* 无下划线 */
+    text-decoration: none;
+    /* 颜色纯白 */
+    background-color: inherit;
+
+    color: #fff;
+}
+
+p a:hover,
+p a:focus
+{
+    /* 加1px的下边框 */
+    border-bottom: 1px dotted #fff;
+}
+
+/* 默认链接风格end */
+
+/* 默认导航参数 */
+.navbar
+{
+    background-color: rgba(0, 0, 0, .5);
+}
+
+nav *
+{
+    font-family: 'Roboto', 'Noto Sans SC', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 30px;
+
+    text-align: center;
+
+    color: #fff;
+}
+
+nav .brand
+{
+    float: left;
+}
+
+.navbar-toggle span
+{
+    /* 蓝色 */
+    background-color: #19b9e7;
+}
+
+nav ul.dropdown-menu
+{
+    background-color: rgba(0, 0, 0, .5);
+}
+
+/* 导航栏中链接风格 */
+.navbar-nav>li>a
+{
+    padding: 0;
+    /* 此处与导航中图片高度一致 */
+    line-height: 32px;
+}
+
+.nav .open>a,
+.nav .open>a:focus,
+.nav .open>a:hover
+{
+    background-color: inherit;
+    color: inherit;
+}
+
+/* 默认导航参数end */
+
+/* 默认文本选择风格 字体颜色纯白，背景黑色透明 */
+::-moz-selection
+{
+    background: rgba(0,0,0,.4);
+    text-shadow: none;
+}
+::selection
+{
+    background: rgba(0,0,0,.4);
+    text-shadow: none;
+}
+/* 默认文本选择风格end */
+
+/* 默认段落风格 */
+.default-h1,
+{
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 50px;
+
+    margin-top: 10px;
+}
+
+.default-h1 strong
+{
+    font-size: 48px;
+}
+
+.default-h2
+{
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 50px;
+
+    margin-top: 10px;
+}
+
+.default-h3
+{
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 30px;
+}
+
+/* 默认粗字体 */
+strong
+{
+    font-weight: 700;
+}
+
+/* 默认段落风格end */
+
+/* 默认图片风格 */
+img
+{
+    max-width: 100%;
+}
+/* 默认图片风格end */
+
+/* 按钮式链接风格 */
+.btn-link
+{
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 16px;
+
+    display: inline-block;
+
+    height: 50px;
+    margin: 5px;
+    padding: 15px 20px 0 20px;
+
+    border: 1px solid #fff;
+    -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+            border-radius: 4px;
+    background: rgba(0, 0, 0, .3);
+}
+.btn-link:hover,
+.btn-link:focus,
+.btn-link:active,
+.btn-link:active:focus
+{
+    opacity: .6;
+    outline: 0;
+    background: rgba(0, 0, 0, .3);
+}
+
+.btn-link i
+{
+    font-size: 20px;
+    line-height: 20px;
+
+    padding-right: 5px;
+
+    vertical-align: middle;
+}
+/* 按钮式链接风格end */
+
+/* 默认form风格 */
+
+/* 最外层框架
+   整个form包含top和bottom两部分 */
+.form-box
+{
+    /* 占据整个栅格 */
+    /* 向下偏移 */
+    margin-top: 70px;
+}
+
+/* form标题部分
+   包括左边个一个H3（左上）和一个P（左下），右边一个图片 */
+.form-top
+{
+    /* 清除form-top-left的浮动 */
+    overflow: hidden;
+
+    padding: 0 25px 15px 25px;
+
+    text-align: left;
+    /* 上面左右2个圆角 */
+
+    -webkit-border-radius: 4px 4px 0 0;
+       -moz-border-radius: 4px 4px 0 0;
+            border-radius: 4px 4px 0 0;
+    background: #444;
+    /* 背景黑色透明 */
+    background: rgba(0, 0, 0, .35);
+}
+
+.form-top-left
+{
+    /* 与后面元素排在同一行 */
+    float: left;
+    /* 占75%宽度 */
+
+    width: 75%;
+    padding-top: 25px;
+}
+
+.form-top-left h3
+{
+    margin-top: 0;
+}
+.form-top-left p
+{
+    opacity: .8;
+}
+
+/* top右侧图片 */
+.form-top-right
+{
+    /* 图片大小 */
+    font-size: 66px;
+    /* 图片粗细 */
+    line-height: 100px;
+    /* 与前面元素排在同一行 */
+
+    float: left;
+    /* 占用25%宽度 */
+
+    width: 25%;
+    padding-top: 5px;
+
+    text-align: right;
+
+    opacity: .3;
+}
+
+/* form bottom部分，包含<form> */
+.form-bottom
+{
+    /* 清除form-top-left的浮动 */
+    overflow: hidden;
+    /* padding部分，体现主题色 */
+    padding: 25px 25px 30px 25px;
+
+    text-align: left;
+    /* 下面左右2个圆角 */
+
+    -webkit-border-radius: 0 0 4px 4px;
+       -moz-border-radius: 0 0 4px 4px;
+            border-radius: 0 0 4px 4px;
+    background: #444;
+    /* 背景黑色透明 */
+    background: rgba(0, 0, 0, .3);
+}
+
+/* form中textarea默认参数 */
+.form-bottom form textarea
+{
+    height: 100px;
+}
+
+/* form中button默认参数 */
+.form-bottom form button.btn
+{
+    width: 100%;
+}
+
+/* 校验出错后为控件添加的风格，由JS添加 */
+.form-bottom form .input-error
+{
+    /* 边框3px红色渐变 */
+    box-shadow: 0 0 3px 3px red;
+}
+
+input[type='text'],
+input[type='password'],
+textarea,
+textarea.form-control
+{
+    font-family: 'Roboto', 'Noto Sans SC', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 50px;
+
+    height: 50px;
+    margin: 0;
+    padding: 0 20px;
+
+    -webkit-transition: all .3s;
+       -moz-transition: all .3s;
+        -ms-transition: all .3s;
+         -o-transition: all .3s;
+            transition: all .3s;
+    vertical-align: middle;
+
+    color: #888;
+    border: 3px solid #fff;
+    -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+            border-radius: 4px;
+    background: #fff;
+    -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+            box-shadow: none;
+}
+
+textarea,
+textarea.form-control
+{
+    line-height: 30px;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+input[type='text']:focus,
+input[type='password']:focus,
+textarea:focus,
+textarea.form-control:focus
+{
+    border: 3px solid #fff;
+    outline: 0;
+    background: #fff;
+    -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+            box-shadow: none;
+}
+
+/* 设置placeholder为灰色 */
+input[type='text']:-moz-placeholder,
+input[type='password']:-moz-placeholder,
+textarea:-moz-placeholder,
+textarea.form-control:-moz-placeholder
+{
+    color: #888;
+}
+
+input[type='text']:-ms-input-placeholder,
+input[type='password']:-ms-input-placeholder,
+textarea:-ms-input-placeholder,
+textarea.form-control:-ms-input-placeholder
+{
+    color: #888;
+}
+
+input[type='text']::-webkit-input-placeholder,
+input[type='password']::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder,
+textarea.form-control::-webkit-input-placeholder
+{
+    color: #888;
+}
+/* 设置placeholder为灰色end */
+
+button.btn
+{
+    font-family: 'Roboto', 'Noto Sans SC', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 50px;
+
+    height: 50px;
+    margin: 0;
+    padding: 0 20px;
+
+    -webkit-transition: all .3s;
+       -moz-transition: all .3s;
+        -ms-transition: all .3s;
+         -o-transition: all .3s;
+            transition: all .3s;
+    vertical-align: middle;
+
+    color: #fff;
+    border: 0;
+    -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+            border-radius: 4px;
+    background: #19b9e7;
+    -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+            box-shadow: none;
+    text-shadow: none;
+}
+
+button.btn:hover
+{
+    opacity: .6;
+    color: #fff;
+}
+
+button.btn:active
+{
+    opacity: .6;
+    color: #fff;
+    outline: 0;
+    -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+            box-shadow: none;
+}
+
+button.btn:focus
+{
+    opacity: .6;
+    color: #fff;
+    outline: 0;
+    background: #19b9e7;
+}
+
+button.btn:active:focus,
+button.btn.active:focus
+{
+    opacity: .6;
+    color: #fff;
+    outline: 0;
+    background: #19b9e7;
+}
+
+/* 默认form风格end */
+
+/* 侧边栏风格 */
+
+.side-nav
+{
+    /* 清除form-top-left的浮动 */
+    overflow: hidden;
+    /* padding部分，体现主题色 */
+    padding: 0;
+
+    text-align: center;
+    /* 下面左右2个圆角 */
+
+    -webkit-border-radius: 4px 4px 4px 4px;
+       -moz-border-radius: 4px 4px 4px 4px;
+            border-radius: 4px 4px 4px 4px;
+}
+
+.side-nav .navbar-toggle
+{
+    padding: 10px;
+    margin:0;
+    border: none;
+    /* 背景黑色透明 */
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.side-nav ul
+{
+    background-color: rgba(0, 0, 0, .3);
+}
+
+/* 侧边栏风格end */
+
+/* 默认footer风格 */
+
+footer
+{
+    padding-top: 40px;
+    padding-bottom: 70px;
+}
+
+footer .footer-border
+{
+    width: 200px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+
+    border-top: 1px solid #fff;
+    border-top: 1px solid rgba(255, 255, 255, .6);
+}
+
+footer p
+{
+    opacity: .8;
+}
+
+/* 默认footer风格end */
+
+/* 返回顶部按钮 */
+
+#top-link-block a.well
+{
+    font-family: 'Roboto', 'Noto Sans SC', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 30px;
+
+    text-align: center;
+
+    color: #fff;
+    border: none;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+/* affix-top时显示在window之外 */
+#top-link-block.affix-top
+{
+    position: absolute;
+    right: 10px;
+    bottom: -10px;
+
+}
+#top-link-block.affix
+{
+    right: 10px;
+    bottom: 10px;
+}
+
+/* 返回顶部按钮end */
+
+/* 侧扁栏风格 */
+
+#side-bav-bar
+{
+    position: fixed;
+}
+
+#side-bav-bar,
+#side-bav-bar button.navbar-toggle 
+{
+    float: left;
+    z-index: 999;
+}
+
+#doc-create-view
+{
+    float: right;
+}
+
+/* 超小屏幕（手机，小于 768px） */
+@media (max-width: 767px) {
+    #doc-create-view
+    {
+        float: none;
+    }
+}
+
+/* 侧扁栏风格end */

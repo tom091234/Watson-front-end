@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>合同管理</title>
+    <meta name="description" content="影视合同生成">
+    <meta name="author" content="xiao kai, peng">
+    <link rel="icon" href="./favicon.ico">
+
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" href="./main_framework.css">
+	<link rel="stylesheet" href="./contract-info.css">
+
+</head>
+
+<body>
+	<!-- 置顶导航 -->
+	<nav class="navbar navbar-inverse navbar-static-top">
+		<div class="navbar-header">
+			<button class="navbar-toggle" data-toggle="collapse" data-target="#main_top_navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">
+				logo
+			</a>
+		</div>
+
+		<div class="collapse navbar-collapse" id="main_top_navbar">
+			<!-- 以下填充置顶导航中的链接 -->
+			<ul class="nav navbar-nav">
+				<li class="active">
+					<a href="#">示例1</a>
+				</li>
+				<li>
+					<a href="#">示例2</a>
+				</li>
+			</ul>
+
+			<!-- 这里是登录的按钮或者用户管理的下拉菜单 -->
+			<!-- 这里示例下拉菜单 -->
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						用户名
+						<span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="#">我的合同</a></li>
+						<li><a href="#">站内信</a></li>
+						<li><a href="#">账户管理</a></li>
+						<li class="divider"></li>
+						<li><a href="#">退出登录</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="scrollToTop">
+		<i class="fa fa-angle-up"></i>
+	</div>
+
+	<!-- 表格 -->
+	<div class="container">
+		<div class="table-responsive table-striped table-hover">
+			<table class="table">
+				<caption>您的合同</caption>
+				<thead>
+					<tr>
+						<th>索引</th>
+						<th>编号</th>
+						<th>名称</th>
+						<th>生成时间</th>
+						<th>状态</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="success">
+						<td>1</td>
+						<td>111</td>
+						<td>aaa</td>
+						<td>23/11/2013</td>
+						<td>已审核</td>
+						<td><a href="#">删除</a></td>
+					</tr>
+					<tr class="warning">
+						<td>1</td>
+						<td>111</td>
+						<td>aaa</td>
+						<td>23/11/2013</td>
+						<td>未提交</td>
+						<td><a href="#">编辑</a>、<a href="#">删除</a></td>
+					</tr>
+					<tr class="danger">
+						<td>1</td>
+						<td>111</td>
+						<td>aaa</td>
+						<td>23/11/2013</td>
+						<td>未通过</td>
+						<td><a href="#">编辑</a>、<a href="#">删除</a></td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>111</td>
+						<td>aaa</td>
+						<td>23/11/2013</td>
+						<td>新建</td>
+						<td><a href="#">编辑</a>、<a href="#">删除</a></td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>111</td>
+						<td>aaa</td>
+						<td>23/11/2013</td>
+						<td>新建</td>
+						<td><a href="#">编辑</a>、<a href="#">删除</a></td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>111</td>
+						<td>aaa</td>
+						<td>23/11/2013</td>
+						<td>新建</td>
+						<td><a href="#">编辑</a>、<a href="#">删除</a></td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>111</td>
+						<td>aaa</td>
+						<td>23/11/2013</td>
+						<td>新建</td>
+						<td><a href="#">编辑</a>、<a href="#">删除</a></td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>111</td>
+						<td>aaa</td>
+						<td>23/11/2013</td>
+						<td>新建</td>
+						<td><a href="#">编辑</a>、<a href="#">删除</a></td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>111</td>
+						<td>aaa</td>
+						<td>23/11/2013</td>
+						<td>新建</td>
+						<td><a href="#">编辑</a>、<a href="#">删除</a></td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>111</td>
+						<td>aaa</td>
+						<td>23/11/2013</td>
+						<td>新建</td>
+						<td><a href="#">编辑</a>、<a href="#">删除</a></td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>111</td>
+						<td>aaa</td>
+						<td>23/11/2013</td>
+						<td>新建</td>
+						<td><a href="#">编辑</a>、<a href="#">删除</a></td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>111</td>
+						<td>aaa</td>
+						<td>23/11/2013</td>
+						<td>新建</td>
+						<td><a href="#">编辑</a>、<a href="#">删除</a></td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>111</td>
+						<td>aaa</td>
+						<td>23/11/2013</td>
+						<td>新建</td>
+						<td><a href="#">编辑</a>、<a href="#">删除</a></td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>111</td>
+						<td>aaa</td>
+						<td>23/11/2013</td>
+						<td>新建</td>
+						<td><a href="#">编辑</a>、<a href="#">删除</a></td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>111</td>
+						<td>aaa</td>
+						<td>23/11/2013</td>
+						<td>新建</td>
+						<td><a href="#">编辑</a>、<a href="#">删除</a></td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>111</td>
+						<td>aaa</td>
+						<td>23/11/2013</td>
+						<td>新建</td>
+						<td><a href="#">编辑</a>、<a href="#">删除</a></td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>111</td>
+						<td>aaa</td>
+						<td>23/11/2013</td>
+						<td>新建</td>
+						<td><a href="#">编辑</a>、<a href="#">删除</a></td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>111</td>
+						<td>aaa</td>
+						<td>23/11/2013</td>
+						<td>新建</td>
+						<td><a href="#">编辑</a>、<a href="#">删除</a></td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>111</td>
+						<td>aaa</td>
+						<td>23/11/2013</td>
+						<td>新建</td>
+						<td><a href="#">编辑</a>、<a href="#">删除</a></td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>111</td>
+						<td>aaa</td>
+						<td>23/11/2013</td>
+						<td>新建</td>
+						<td><a href="#">编辑</a>、<a href="#">删除</a></td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>111</td>
+						<td>aaa</td>
+						<td>23/11/2013</td>
+						<td>新建</td>
+						<td><a href="#">编辑</a>、<a href="#">删除</a></td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>111</td>
+						<td>aaa</td>
+						<td>23/11/2013</td>
+						<td>新建</td>
+						<td><a href="#">编辑</a>、<a href="#">删除</a></td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>111</td>
+						<td>aaa</td>
+						<td>23/11/2013</td>
+						<td>新建</td>
+						<td><a href="#">编辑</a>、<a href="#">删除</a></td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>111</td>
+						<td>aaa</td>
+						<td>23/11/2013</td>
+						<td>新建</td>
+						<td><a href="#">编辑</a>、<a href="#">删除</a></td>
+					</tr>
+				</tbody>
+			</div>
+		</table>
+	</div>
+
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+</body>
+</html>
