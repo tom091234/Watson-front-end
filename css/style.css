@@ -579,4 +579,13 @@ footer p
     }
 }
 
+
+table>caption
+{
+    font-size: 40px;
+    color: #fff;
+    text-align:center;
+}
+
+
 /* 侧扁栏风格end */
