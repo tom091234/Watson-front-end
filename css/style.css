@@ -579,6 +579,10 @@ footer p
     }
 }
 
+/* 侧扁栏风格end */
+
+
+/* 列表风格 */
 
 table>caption
 {
@@ -587,5 +591,28 @@ table>caption
     text-align:center;
 }
 
+table thead th,
+table tbody td
+{
+    text-align:center;
+}
 
-/* 侧扁栏风格end */
+table select
+{
+    background-color:transparent !important;
+    color: #fff;
+    border: none;
+}
+
+table select option,
+table select option:hover,
+table select option:focus,
+table select option:active,
+table select option:active:focus
+{
+    background-color:red;
+    color: #fff;
+    border: none;
+}
+
+/* 列表风格end */
