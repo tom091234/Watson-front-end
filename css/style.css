@@ -586,9 +586,8 @@ footer p
 
 table>caption
 {
-    font-size: 40px;
     color: #fff;
-    text-align:center;
+    text-align:left;
 }
 
 table thead th,
@@ -597,7 +596,7 @@ table tbody td
     text-align:center;
 }
 
-table select
+.table_select
 {
     background-color:transparent;
     color: #fff;
@@ -607,14 +606,11 @@ table select
             border-radius: 4px 4px 4px 4px;
 }
 
-table select option,
-table select option:hover,
-table select option:focus,
-table select option:active,
-table select option:active:focus
+.page_option
 {
-    border: none;
+    background-color: rgba(0,0,0,0.3);
 }
+
 
 table input,
 table input:focus
@@ -624,14 +620,73 @@ table input:focus
     text-align: center;
 }
 
-.green
+
+
+input[type='search']
 {
-    background: #7DEE4E;
+    border: none;
+    color: #000;
+    height: 50px;
+    font-size: 20px;
+
+    -webkit-border-radius: 90px 0 0 90px;
+       -moz-border-radius: 90px 0 0 90px;
+            border-radius: 90px 0 0 90px;
 }
 
-.red
+button.search_btn
 {
-    background: #EB6060;
+    background-color: #fff;
+    color: #000;
+    font-size: 20px;
+    -webkit-border-radius: 0 90px 90px 0;
+       -moz-border-radius: 0 90px 90px 0;
+            border-radius: 0 90px 90px 0;
+}
+
+div.search_div
+{
+    padding-bottom: 20px;
+}
+
+.pagination
+{
+    margin: 7px;
+}
+
+.pagination li
+{
+}
+
+.pagination>li>a,
+.pagination>li>a:focus,
+.pagination>li>a:hover,
+.pagination>li>span:focus,
+.pagination>li>span:hover 
+{
+    background-color: rgba(0,0,0,0.3);
+    color: #fff;
+    border: none;
+}
+
+.pagination>li>a.active
+{
+    background-color: #fff;
+    color: #000;
+}
+
+.pagination>li:first-child>a.disabled,
+.pagination>li:first-child>span.disabled,
+.pagination>li:last-child>a.disabled,
+.pagination>li:last-child>span.disabled
+{
+    /*background-color: #fff;*/
+}
+
+button.table-submit
+{
+    height: 44px;
+    float: right;
 }
 
 /* 列表风格end */
