@@ -298,6 +298,25 @@ img
     background: rgba(0, 0, 0, .3);
 }
 
+form .form-group
+{
+    overflow: hidden;
+}
+
+.form-bottom-left
+{
+    float: left;
+    width:25%;
+    padding-right: 15px;
+}
+
+.form-bottom-right
+{
+    float: left;
+    width:75%;
+}
+
+
 /* form中textarea默认参数 */
 .form-bottom form textarea
 {
@@ -319,8 +338,6 @@ img
 
 form input[type='text'],
 form input[type='password'],
-form textarea,
-form textarea.form-control
 {
     font-family: 'Roboto', 'Noto Sans SC', sans-serif;
     font-size: 16px;
@@ -464,6 +481,14 @@ button.btn.active:focus
 
 /* 侧边栏风格 */
 
+#side-nav-bar,
+#side-nav-bar a,
+#side-nav
+{
+    padding-left: 0;
+    padding-right: 0;
+}
+
 .side-nav
 {
     /* 清除form-top-left的浮动 */
@@ -493,7 +518,80 @@ button.btn.active:focus
     background-color: rgba(0, 0, 0, .3);
 }
 
+#side-nav-bar
+{
+    position: fixed;
+}
+
+#side-nav-bar,
+#side-nav-bar button.navbar-toggle 
+{
+    float: left;
+    z-index: 999;
+}
+
+#doc-create-view
+{
+    float: right;
+}
+
+/* 超小屏幕（手机，小于 768px） */
+@media (max-width: 767px) {
+    #doc-create-view
+    {
+        float: none;
+    }
+}
+
 /* 侧边栏风格end */
+
+/* 合同生成表单 */
+
+#questionnaire
+{
+    margin-top: 0;
+}
+
+#switch-bar
+{
+    border-bottom: 0;
+}
+
+embed
+{
+    width: 100%;
+    height: 1000px;
+}
+
+#switch-bar>li.active>a,
+#switch-bar>li.active>a:focus,
+#switch-bar>li.active>a:hover,
+#switch-bar>li>a:focus,
+#switch-bar>li>a:hover
+{
+    background-color: rgba(0,0,0,0.3);
+    color: #fff;
+    border:0;
+}
+
+.section-box
+{
+    overflow: hidden;
+}
+
+.separator-title
+{
+    float: left;
+}
+
+.separator
+{
+    float: left;
+    width: 50px;
+    margin-top: 14px;
+}
+
+/* 合同生成表单end */
 
 /* 默认footer风格 */
 
@@ -551,36 +649,6 @@ footer p
 }
 
 /* 返回顶部按钮end */
-
-/* 侧扁栏风格 */
-
-#side-bav-bar
-{
-    position: fixed;
-}
-
-#side-bav-bar,
-#side-bav-bar button.navbar-toggle 
-{
-    float: left;
-    z-index: 999;
-}
-
-#doc-create-view
-{
-    float: right;
-}
-
-/* 超小屏幕（手机，小于 768px） */
-@media (max-width: 767px) {
-    #doc-create-view
-    {
-        float: none;
-    }
-}
-
-/* 侧扁栏风格end */
-
 
 /* 列表风格 */
 

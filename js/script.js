@@ -9,9 +9,34 @@ $(document).ready(function() {
 	}
 });
 
+//table中select颜色随选项变化
+$(document).ready(function() {
+    $('table select').css("background-color",$(this).find("option:selected").css("background-color"));
+});
+
+$(document).ready(function() {
+    $('table select').change(function() {
+        $(this).css("background-color",$(this).find("option:selected").css("background-color"));
+    });
+});
+
+//设置侧边栏的宽度
+$(document).ready(function() {
+    $('#side-nav-bar').width($('#doc-create-view').width()/3);
+});
+
+$(window).resize(function() {
+    $('#side-nav-bar').width($('#doc-create-view').width()/3);
+});
+
+//输入时间的地方默认输入今天
+$(document).ready(function() {
+    document.getElementsByClassName("form-time-date").value = (new Date()).toLocaleDateString();
+});
+
 //侧边栏悬浮
 $(document).ready(function() {
-    $('#side-bav-bar').affix({
+    $('#side-nav-bar').affix({
         offset: {
         	top: function () {
         		return (this.bottom = $('nav').outerHeight(true))
@@ -23,13 +48,4 @@ $(document).ready(function() {
     });
 });
 
-//table中select颜色随选项变化
-$(document).ready(function() {
-    $('table select').css("background-color",$(this).find("option:selected").css("background-color"));
-});
 
-$(document).ready(function() {
-    $('table select').change(function() {
-        $(this).css("background-color",$(this).find("option:selected").css("background-color"));
-    });
-});
