@@ -59,9 +59,20 @@ p a:focus
 /* 默认链接风格end */
 
 /* 默认导航参数 */
+
 .navbar
 {
     background-color: rgba(0, 0, 0, .5);
+    margin-bottom: 0;
+}
+
+.avatar
+{
+    height: 40px;
+    width: 40px;
+    -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+            border-radius: 4px;
 }
 
 nav *
@@ -758,3 +769,36 @@ button.table-submit
 }
 
 /* 列表风格end */
+
+/* 巨幕 */
+
+.jumbotron
+{
+    background:url(../img/jumbotron.jpg);
+    background-repeat:no-repeat;
+    height: 600px;
+    background-position:center;
+}
+
+/* 巨幕end */
+
+/* 缩略图介绍 */
+
+.thumbnail-wrapper
+{
+    margin-top: 40px;
+}
+
+.thumbnail
+{
+    background-color: rgba(0,0,0,0.3);
+    border: 0;
+}
+
+.thumbnail h3,
+.thumbnail p
+{
+    color: #fff;
+}
+
+/* 缩略图介绍end */

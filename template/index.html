@@ -5,8 +5,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>注册页面</title>
-    <meta name="description" content="影视合同生成注册页面">
+	<title>主页</title>
+    <meta name="description" content="影视合同生成主页">
     <meta name="author" content="xiao kai, peng">
 
     <!-- 导入Roboto字体
@@ -61,72 +61,119 @@
 					<!-- 这里是登录的按钮或者用户管理的下拉菜单 -->
 					<!-- 这里示例下拉菜单 -->
 					<ul class="nav navbar-nav navbar-right">
-						<li>
-							<a href="#">注册</a>
-						</li>
-						<li>
-							<span>/</span>
-						</li>
-						<li>
-							<a href="#">登录</a>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+								用户名
+								<img src="../img/avatar.jpg" class="avatar">
+								<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="#">我的合同</a></li>
+								<li><a href="#">站内信</a></li>
+								<li><a href="#">账户管理</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="#">退出登录</a></li>
+							</ul>
 						</li>
 					</ul>
 				</div>
 			</div>
 		</nav>
 
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-8 col-sm-offset-2 hidden-xs">
-					<h1 class="default-h1"><strong>欢迎</strong>新用户！</h1>
-					<div>
-						<p>
-							我们为您提供<strong>专业的</strong>影视合同服务。
-						</p>
-						<p>
-							无论您是编剧、演员、还是导演，您都可以通过我们的网站<strong>免费</strong>生成为您<strong>量身定制的</strong>各种类型的合同。
-						</p>
-						<p>
-							另外，您也可以通过我们的<a href="#"><strong>邮箱</strong></a>获得更进一步的法律帮助。
-						</p>
-					</div>
-				</div>
+		<div class="jumbotron">
+			<div class="container">
+			<h1>添加介绍</h1>
+			<p>...</p>
 			</div>
 		</div>
 	</header>
 
 	<main>
 		<div class="container">
-			<div class="row">
-				<div class="col-sm-6 col-sm-offset-3">
-					<div class="form-box">
-						<div class="form-top">
-							<div class="form-top-left">
-								<h3 class="default-h3">
-									请在这里注册
-								</h3>
-								<p>
-									填写几个简单的表单即可马上登陆
-								</p>
-							</div>
-							<div class="form-top-right">
-								<i class="fa fa-pencil"></i>
-							</div>
-						</div>
-						<div class="form-bottom">
-							<form role="form" action="" method="post" class="registration-form">
-								<div class="form-group">
-									<label for="regiser-account" class="sr-only">账号</label>
-									<input type="text" name="regiser-account" placeholder="请输入账号..." class="form-account form-control">
-								</div>
-								<div class="form-group">
-									<label for="regiser-password" class="sr-only">密码</label>
-									<input type="password" name="regiser-password" placeholder="请输入密码..." class="form-password form-control">
-								</div>
-								<button type="submit" class="btn">登    录</button>
-							</form>
+			<!-- 幻灯片 -->
+			<div id="carousel" class="carousel slide" data-ride="carousel">
+				<!-- Indicators -->
+				<ol class="carousel-indicators">
+					<li data-target="#carousel" data-slide-to="0" class="active"></li>
+					<li data-target="#carousel" data-slide-to="1"></li>
+				</ol>
+
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner" role="listbox">
+					<div class="item active">
+						<img src="../img/jumbotron.jpg" alt="...">
+						<div class="carousel-caption">
+							<h3>巨幕1</h3>
+							<p>...</p>
 						</div>
 					</div>
+					<div class="item">
+						<img src="../img/jumbotron.jpg" alt="...">
+						<div class="carousel-caption">
+							<h3>巨幕2</h3>
+							<p>...</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- Controls -->
+				<a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					<span class="sr-only">前一个介绍</span>
+				</a>
+				<a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					<span class="sr-only">后一个介绍</span>
+				</a>
+			</div>
+
+			<div class="row thumbnail-wrapper">
+				<div class="col-sm-4">
+					<a href="#" class="thumbnail">
+						<img src="../img/avatar.jpg" alt="...">
+						<div class="caption">
+							<h3>喵喵1</h3>
+							<p>...</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-sm-4">
+					<a href="#" class="thumbnail">
+						<img src="../img/avatar.jpg" alt="...">
+						<div class="caption">
+							<h3>喵喵2</h3>
+							<p>...</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-sm-4">
+					<a href="#" class="thumbnail">
+						<img src="../img/avatar.jpg" alt="...">
+						<div class="caption">
+							<h3>喵喵3</h3>
+							<p>...</p>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="row thumbnail-wrapper">
+				<div class="col-sm-6">
+					<a href="#" class="thumbnail">
+						<img src="../img/avatar.jpg" alt="...">
+						<div class="caption">
+							<h3>喵喵4</h3>
+							<p>...</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-sm-6">
+					<a href="#" class="thumbnail">
+						<img src="../img/avatar.jpg" alt="...">
+						<div class="caption">
+							<h3>喵喵5</h3>
+							<p>...</p>
+						</div>
+					</a>
 				</div>
 			</div>
 		</div>

@@ -31,7 +31,7 @@ $(window).resize(function() {
 
 //输入时间的地方默认输入今天
 $(document).ready(function() {
-    document.getElementsByClassName("form-time-date").value = (new Date()).toLocaleDateString();
+    //document.getElementsByClassName("form-time-date").value = (new Date()).toLocaleDateString();
 });
 
 //侧边栏悬浮
@@ -47,5 +47,4 @@ $(document).ready(function() {
         }
     });
 });
-
 
