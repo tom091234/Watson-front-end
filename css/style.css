@@ -338,6 +338,7 @@ form .form-group
 .form-bottom form button.btn
 {
     width: 100%;
+    background-color: #F39C12;
 }
 
 /* 校验出错后为控件添加的风格，由JS添加 */
@@ -799,6 +800,12 @@ button.table-submit
 .thumbnail p
 {
     color: #fff;
+}
+
+.thumbnail i
+{
+    margin:20px;
+    font-size: 10em;
 }
 
 /* 缩略图介绍end */
