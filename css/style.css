@@ -22,6 +22,12 @@ body
     background-attachment: fixed;
 }
 
+.body-wrapper
+{
+    overflow: hidden;
+    margin-top: 70px;
+}
+
 /* 默认参数end */
 
 /* 默认链接风格 */
@@ -228,7 +234,7 @@ img
 {
     /* 占据整个栅格 */
     /* 向下偏移 */
-    margin-top: 70px;
+    margin-top: 0;
 }
 
 /* form标题部分
@@ -809,3 +815,24 @@ button.table-submit
 }
 
 /* 缩略图介绍end */
+
+
+/* 向导 */
+
+.guider-wrapper
+{
+    position: relative;
+    display: table;
+}
+
+.guider-view
+{
+    background-color: rgba(0,0,0,0.3) !important;
+    width:80% !important;
+    margin-left: 10% !important;
+    margin-right: 10% !important;
+    margin-bottom: 5px !important;
+}
+
+
+/* 向导end */
