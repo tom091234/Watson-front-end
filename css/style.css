@@ -315,25 +315,6 @@ img
     background: rgba(0, 0, 0, .3);
 }
 
-form .form-group
-{
-    overflow: hidden;
-}
-
-.form-bottom-left
-{
-    float: left;
-    width:25%;
-    padding-right: 15px;
-}
-
-.form-bottom-right
-{
-    float: left;
-    width:75%;
-}
-
-
 /* form中textarea默认参数 */
 .form-bottom form textarea
 {
@@ -834,5 +815,12 @@ button.table-submit
     margin-bottom: 5px !important;
 }
 
-
 /* 向导end */
+
+/* 时间选择按钮 */
+
+.bootstrap-datetimepicker-widget
+{
+    color: #000;
+    background-color: #fff;
+}

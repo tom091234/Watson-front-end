@@ -5,8 +5,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>生成合同</title>
-    <meta name="description" content="影视合同生成生成页面">
+	<title>文学作品改编权合同</title>
+    <meta name="description" content="文学作品改编权合同生成生成页面">
     <meta name="author" content="xiao kai, peng">
 
     <!-- 导入Roboto字体
@@ -16,6 +16,7 @@
 
 	<link href="https://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 	<link href="https://cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
 	<link rel="stylesheet" href="../css/style.css">
 
     <!-- 加载各种icon -->
@@ -94,16 +95,23 @@
 
 					<div class="collapse navbar-collapse" id="side-nav">
 						<ul class="nav nav-pills nav-stacked side-nav">
-							<li role="presentation"><a href="#section-1">基本信息</a></li>
-							<li role="presentation"><a href="#section-2">剧本信息</a></li>
-							<li role="presentation"><a href="#section-3">产权信息</a></li>
+							<li role="presentation"><a href="#section-1">合同双方</a></li>
+							<li role="presentation"><a href="#section-2">许可作品</a></li>
+							<li role="presentation"><a href="#section-3">许可内容</a></li>
+							<li role="presentation"><a href="#section-4">作品交付</a></li>
+							<li role="presentation"><a href="#section-5">许可费用</a></li>
+							<li role="presentation"><a href="#section-6">知识产权归属</a></li>
+							<li role="presentation"><a href="#section-7">权利义务</a></li>
+							<li role="presentation"><a href="#section-8">违约责任</a></li>
+							<li role="presentation"><a href="#section-9">合同解除</a></li>
+							<li role="presentation"><a href="#section-10">附则</a></li>
 						</ul>
 					</div>
 				</div>
 				<div class="col-sm-9" id="doc-create-view">
 					<ul class="nav nav-tabs" id="switch-bar">
-						<li role="presentation" class="active"><a href="#questionnaire-view" aria-controls="home" role="tab" data-toggle="tab">合同问卷</a></li>
-						<li role="presentation"><a href="#sample-view" aria-controls="profile" role="tab" data-toggle="tab">合同预览</a></li>
+						<li role="presentation" class="active"><a href="#questionnaire-view" aria-controls="home" role="tab" data-toggle="tab">问卷</a></li>
+						<li role="presentation"><a href="#sample-view" aria-controls="profile" role="tab" data-toggle="tab">预览</a></li>
 					</ul>
 
 					<div class="tab-content">
@@ -112,7 +120,7 @@
 								<div class="form-top">
 									<div class="form-top-left">
 										<h3 class="default-h3">
-											“剧本合同”生成
+											文学作品改编权合同
 										</h3>
 										<p>
 											请按要求填入信息，我们将为您自动生成一份合同
@@ -125,58 +133,573 @@
 								<div class="form-bottom">
 									<form role="form" action="" method="post" class="registration-form">
 										<div class="section-box">
-											<hr class="separator" /><p class="separator-title" id="section-1">基本信息</p><hr class="separator" />
+											<hr class="separator" /><p class="separator-title" id="section-1">合同双方</p><hr class="separator" />
 										</div>
 										<div class="form-group">
-											<div class="form-bottom-left">
-												<label for="first-party-name" class="sr-only">甲方：</label>
-												<input type="text" name="first-party-name" placeholder="甲方姓名..." class="form-control">
+											<label for="script-name" class="sr-only">许可方：(以下简称：“甲方”)：</label>
+											<input type="text" name="script-name" placeholder="许可方：(以下简称：“甲方”)：" class="form-control">
+										</div>
+										<div class="row">
+											<div class="col-sm-6">
+												<div class="form-group">
+													<label for="first-party-name" class="sr-only">法定代表人：</label>
+													<input type="text" name="first-party-name" placeholder="法定代表人：" class="form-control">
+												</div>
 											</div>
-											<div class="form-bottom-right">
-												<label for="first-party-id" class="sr-only">甲方身份证</label>
-												<input type="password" name="first-party-id" placeholder="请输入甲方18位身份证号..." class="form-control">
+											<div class="col-sm-6">
+												<div class="form-group">
+													<label for="first-party-id" class="sr-only">负责人证件号码：</label>
+													<input type="password" name="first-party-id" placeholder="负责人证件号码：" class="form-control">
+												</div>
 											</div>
 										</div>
 										<div class="form-group">
-											<div class="form-bottom-left">
-												<label for="second-party-id" class="sr-only">乙方：</label>
-												<input type="password" name="second-party-id" placeholder="乙方姓名..." class="form-control">
+											<label for="script-content" class="sr-only">联系地址：</label>
+											<textarea name="script-content" placeholder="联系地址：" class="form-control"></textarea>
+										</div>
+										<div class="row">
+											<div class="col-sm-6">
+												<div class="form-group">
+													<label for="first-party-name" class="sr-only">联系电话：</label>
+													<input type="text" name="first-party-name" placeholder="联系电话：" class="form-control">
+												</div>
 											</div>
-											<div class="form-bottom-right">
-												<label for="second-party-name" class="sr-only">乙方身份证</label>
-												<input type="text" name="second-party-name" placeholder="请输入乙方18位身份证号..." class="form-control">
+											<div class="col-sm-6">
+												<div class="form-group">
+													<label for="first-party-id" class="sr-only">代理人员：</label>
+													<input type="password" name="first-party-id" placeholder="代理人员：" class="form-control">
+												</div>
 											</div>
+										</div>
+										<div class="form-group">
+											<label for="script-name" class="sr-only">电子邮箱：</label>
+											<input type="text" name="script-name" placeholder="电子邮箱：" class="form-control">
+										</div>
+										<div class="form-group">
+											<label for="script-name" class="sr-only">被许可方：(以下简称：“乙方”)：</label>
+											<input type="text" name="script-name" placeholder="被许可方：(以下简称：“乙方”)：" class="form-control">
+										</div>
+										<div class="row">
+											<div class="col-sm-6">
+												<div class="form-group">
+													<label for="first-party-name" class="sr-only">法定代表人：</label>
+													<input type="text" name="first-party-name" placeholder="法定代表人：" class="form-control">
+												</div>
+											</div>
+											<div class="col-sm-6">
+												<div class="form-group">
+													<label for="first-party-id" class="sr-only">负责人证件号码：</label>
+													<input type="password" name="first-party-id" placeholder="负责人证件号码：" class="form-control">
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="script-content" class="sr-only">联系地址：</label>
+											<textarea name="script-content" placeholder="联系地址：" class="form-control"></textarea>
+										</div>
+										<div class="row">
+											<div class="col-sm-5">
+												<div class="form-group">
+													<label for="first-party-name" class="sr-only">联系电话：</label>
+													<input type="text" name="first-party-name" placeholder="联系电话：" class="form-control">
+												</div>
+											</div>
+											<div class="col-sm-7">
+												<div class="form-group">
+													<label for="first-party-id" class="sr-only">委托人员：</label>
+													<input type="password" name="first-party-id" placeholder="委托人员：" class="form-control">
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="script-name" class="sr-only">电子邮箱：</label>
+											<input type="text" name="script-name" placeholder="电子邮箱：" class="form-control">
 										</div>
 										<div class="section-box">
-											<hr class="separator" /><p class="separator-title" id="section-2">剧本信息</p><hr class="separator" />
+											<hr class="separator" /><p class="separator-title" id="section-2">许可作品</p><hr class="separator" />
+										</div>
+										<div class="row">
+											<div class="col-sm-9">
+												<div class="form-group">
+													<label for="script-name" class="sr-only">作品名称：</label>
+													<input type="text" name="script-name" placeholder="作品名称：" class="form-control">
+												</div>
+											</div>
+											<div class="col-sm-3">
+												<div class="form-group">
+													<label for="script-name" class="sr-only">作者：</label>
+													<input type="text" name="script-name" placeholder="作者：" class="form-control">
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-6">
+												<div class="form-group">
+									                <div class='input-group date' id='datetimepicker1'>
+									                	<label for="script-name" class="sr-only">创作完成时间：</label>
+									                    <input type='text' class="form-control" placeholder="创作完成时间："/>
+									                    <span class="input-group-addon">
+									                        <i class="fa fa-calendar"></i>
+									                    </span>
+									                </div>
+									            </div>
+											</div>
+											<div class="col-sm-6">
+												<div class="form-group">
+													<label for="script-name1">作品所有范围：</label>
+													<input type="radio" name="script-name1" value="独立">独立
+													<input type="radio" name="script-name1" value="共同" checked="true">共同
+												</div>
+											</div>
 										</div>
 										<div class="form-group">
-											<label for="script-name" class="sr-only">剧本名称：</label>
-											<input type="text" name="script-name" placeholder="剧本名称..." class="form-control">
+											<label for="published">作品是否出版：</label>
+											<input type="radio" name="published" value="出版">出版
+											<input type="radio" name="published" value="未出版" checked="true">未出版
 										</div>
-										<div class="form-group">
-											<label for="script-summary" class="sr-only">剧本概述：</label>
-											<textarea name="script-summary" placeholder="剧本概述..." class="form-control"></textarea>
+										<div id="published">
+											<div class="row">
+												<div class="col-sm-4">
+													<div class="form-group">
+										                <div class='input-group date' id='datetimepicker2'>
+										                	<label for="script-name" class="sr-only">出版时间：</label>
+										                    <input type='text' class="form-control" placeholder="出版时间："/>
+										                    <span class="input-group-addon">
+										                        <i class="fa fa-calendar"></i>
+										                    </span>
+										                </div>
+										            </div>
+												</div>
+												<div class="col-sm-8">
+													<div class="form-group">
+														<label for="script-name" class="sr-only">出版机构名称：</label>
+														<input type="text" name="script-name" placeholder="出版机构名称：" class="form-control">
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="script-name" class="sr-only">ISBN：</label>
+												<input type="text" name="script-name" placeholder="ISBN：" class="form-control">
+											</div>
+											<div class="form-group">
+												<label for="register">作品著作权是否已登记：</label>
+												<input type="radio" name="register" value="已登记">已登记
+												<input type="radio" name="register" value="未登记" checked="true">未登记
+											</div>
+											<div id="register">
+												<div class="row">
+													<div class="col-sm-4">
+														<div class="form-group">
+											                <div class='input-group date' id='datetimepicker3'>
+											                	<label for="script-name" class="sr-only">登记时间：</label>
+											                    <input type='text' class="form-control" placeholder="登记时间："/>
+											                    <span class="input-group-addon">
+											                        <i class="fa fa-calendar"></i>
+											                    </span>
+											                </div>
+											            </div>
+													</div>
+													<div class="col-sm-8">
+														<div class="form-group">
+															<label for="script-name" class="sr-only">登记号：</label>
+															<input type="text" name="script-name" placeholder="登记号：" class="form-control">
+														</div>
+													</div>
+												</div>
+											</div>
 										</div>
-										<div class="form-group">
-											<label for="script-content" class="sr-only">剧本内容：</label>
-											<textarea name="script-content" placeholder="剧本内容..." class="form-control"></textarea>
-										</div>
-										<div class="form-group">
-											<label for="script-time-submmited" class="sr-only">剧本提交时间：</label>
-											<input type="date" name="script-time-submmited" class="form-time-date form-control" value="">
-										</div>
+
 										<div class="section-box">
-											<hr class="separator" /><p class="separator-title" id="section-3">产权信息</p><hr class="separator" />
+											<hr class="separator" /><p class="separator-title" id="section-3">许可内容</p><hr class="separator" />
+										</div>
+										<div class="row">
+											<div class="col-sm-6">
+												<div class="form-group">
+									                <div class='input-group date' id='datetimepicker4'>
+									                	<label for="script-name" class="sr-only">许可开始时间：</label>
+									                    <input type='text' class="form-control" placeholder="许可开始时间："/>
+									                    <span class="input-group-addon">
+									                        <i class="fa fa-calendar"></i>
+									                    </span>
+									                </div>
+									            </div>
+											</div>
+											<div class="col-sm-6">
+												<div class="form-group">
+									                <div class='input-group date' id='datetimepicker5'>
+									                	<label for="script-name" class="sr-only">许可结束时间：</label>
+									                    <input type='text' class="form-control" placeholder="许可结束时间："/>
+									                    <span class="input-group-addon">
+									                        <i class="fa fa-calendar"></i>
+									                    </span>
+									                </div>
+									            </div>
+											</div>
 										</div>
 										<div class="form-group">
-											<label for="script-name" class="sr-only">产权归属：</label>
-											<input type="text" name="script-name" placeholder="产权归属人..." class="form-control">
+											<label for="script-name3">许可范围：</label>
+											<input type="radio" name="script-name3" value="全世界">全世界
+											<input type="radio" name="script-name3" value="中国境内（不包括港澳台地区）" checked="true">中国境内（不包括港澳台地区）
 										</div>
 										<div class="form-group">
-											<label for="script-name" class="sr-only">著作权归属：</label>
-											<input type="text" name="script-name" placeholder="著作权归属人..." class="form-control">
+											<label for="script-name" class="sr-only">改编作品类型：</label>
+											<input type="text" name="script-name" placeholder="改编作品类型：" class="form-control">
 										</div>
+										<div class="form-group">
+											<label for="script-name4">许可类型：</label>
+											<input type="radio" name="script-name4" value="一般性许可" checked="true">一般性许可
+											<input type="radio" name="script-name4" value="排他性许可">排他性许可
+											<input type="radio" name="script-name4" value="独占专有性许可">独占专有性许可
+										</div>
+										<div class="form-group">
+											<label for="script-name5">前述附属许可权利的性质：</label>
+											<input type="radio" name="script-name5" value="一般性许可" checked="true">一般性许可
+											<input type="radio" name="script-name5" value="排他性许可">排他性许可
+											<input type="radio" name="script-name5" value="独占专有性许可">独占专有性许可
+										</div>
+										<div class="form-group">
+											<label for="script-name6">转许可权：</label>
+											<input type="radio" name="script-name6" value="有">有
+											<input type="radio" name="script-name6" value="无" checked="true">无
+										</div>
+										<div class="form-group">
+											<label for="script-name" class="sr-only">转许可最迟通知甲方天数：</label>
+											<input type="number" name="script-name" placeholder="转许可最迟通知甲方天数：" class="form-control">
+										</div>
+
+										<div class="section-box">
+											<hr class="separator" /><p class="separator-title" id="section-4">作品交付</p><hr class="separator" />
+										</div>
+										<div class="form-group">
+											<label for="script-name" class="sr-only">作品最迟交付天数：</label>
+											<input type="number" name="script-name" placeholder="作品最迟交付天数：" class="form-control">
+										</div>
+										<div class="form-group">
+											<label for="script-content" class="sr-only">交付要求：</label>
+											<textarea name="script-content" placeholder="交付要求：" class="form-control"></textarea>
+										</div>
+
+										<div class="section-box">
+											<hr class="separator" /><p class="separator-title" id="section-5">许可费用</p><hr class="separator" />
+										</div>
+										<div class="form-group">
+											<label for="payment">支付方式：</label>
+											<input type="radio" name="payment" value="一次性支付" checked="true">一次性支付
+											<input type="radio" name="payment" value="分两期支付">分两期支付
+											<input type="radio" name="payment" value="分三期支付">分三期支付
+										</div>
+										<div id="payment-1">
+											<div class="row">
+												<div class="col-sm-4">
+													<div class="form-group">
+														<label for="script-name" class="sr-only">最迟支付天数：</label>
+														<input type="number" name="script-name" placeholder="最迟支付天数：" class="form-control">
+													</div>
+												</div>
+												<div class="col-sm-8">
+													<div class="form-group">
+														<label for="script-name" class="sr-only">总金额：</label>
+														<div class="input-group">
+															<span class="input-group-addon">人民币</span>
+															<input type="number" name="script-name" placeholder="总金额：" class="form-control">
+															<span class="input-group-addon">万元</span>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-sm-4">
+													<div class="form-group">
+														<label for="script-name" class="sr-only">户名：</label>
+														<input type="text" name="script-name" placeholder="户名：" class="form-control">
+													</div>
+												</div>
+												<div class="col-sm-8">
+													<div class="form-group">
+														<label for="script-name" class="sr-only">开户行：</label>
+														<input type="text" name="script-name" placeholder="开户行：" class="form-control">
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="script-name" class="sr-only">账号：</label>
+												<input type="number" name="script-name" placeholder="账号：" class="form-control">
+											</div>
+										</div>
+										<div id="payment-2">
+											<div class="form-group">
+												<label for="value-2" class="sr-only">总金额：</label>
+												<div class="input-group">
+													<span class="input-group-addon">人民币</span>
+													<input type="number" name="value-2" placeholder="总金额：" class="form-control">
+													<span class="input-group-addon">万元</span>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-sm-3">
+													<div class="form-group">
+														<label for="ratio-2-1" class="sr-only">一期支付比例：</label>
+														<div class="input-group">
+															<input type="number" name="ratio-2-1" placeholder="一期支付比例：" class="form-control">
+															<span class="input-group-addon">%</span>
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-6">
+													<div class="form-group">
+														<label for="value-2-1" class="sr-only">一期支付费用：</label>
+														<div class="input-group">
+															<span class="input-group-addon">即，人民币</span>
+															<input type="number" name="value-2-1" placeholder="一期支付费用：" class="form-control">
+															<span class="input-group-addon">万元</span>
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-3">
+													<div class="form-group">
+														<label for="script-name" class="sr-only">最迟支付天数：</label>
+														<input type="number" name="script-name" placeholder="最迟支付天数：" class="form-control">
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-sm-3">
+													<div class="form-group">
+														<label for="ratio-2-2" class="sr-only">二期支付比例：</label>
+														<div class="input-group">
+															<input type="number" name="ratio-2-2" placeholder="二期支付比例：" class="form-control">
+															<span class="input-group-addon">%</span>
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-6">
+													<div class="form-group">
+														<label for="value-2-2" class="sr-only">二期支付费用：</label>
+														<div class="input-group">
+															<span class="input-group-addon">即，人民币</span>
+															<input type="number" name="value-2-2" placeholder="二期支付费用：" class="form-control">
+															<span class="input-group-addon">万元</span>
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-3">
+													<div class="form-group">
+										                <div class='input-group date' id='datetimepicker6'>
+										                	<label for="script-name" class="sr-only">最迟支付日期：</label>
+										                    <input type='text' class="form-control" placeholder="最迟支付日期："/>
+										                    <span class="input-group-addon">
+										                        <i class="fa fa-calendar"></i>
+										                    </span>
+										                </div>
+										            </div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-sm-4">
+													<div class="form-group">
+														<label for="script-name" class="sr-only">户名：</label>
+														<input type="text" name="script-name" placeholder="户名：" class="form-control">
+													</div>
+												</div>
+												<div class="col-sm-8">
+													<div class="form-group">
+														<label for="script-name" class="sr-only">开户行：</label>
+														<input type="text" name="script-name" placeholder="开户行：" class="form-control">
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="script-name" class="sr-only">账号：</label>
+												<input type="number" name="script-name" placeholder="账号：" class="form-control">
+											</div>
+										</div>
+										<div id="payment-3">
+											<div class="form-group">
+												<label for="value-3" class="sr-only">总金额：</label>
+												<div class="input-group">
+													<span class="input-group-addon">人民币</span>
+													<input type="number" name="value-3" placeholder="总金额：" class="form-control">
+													<span class="input-group-addon">万元</span>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-sm-3">
+													<div class="form-group">
+														<label for="ratio-3-1" class="sr-only">一期支付比例：</label>
+														<div class="input-group">
+															<input type="number" name="ratio-3-1" placeholder="一期支付比例：" class="form-control">
+															<span class="input-group-addon">%</span>
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-6">
+													<div class="form-group">
+														<label for="value-3-1" class="sr-only">一期支付费用：</label>
+														<div class="input-group">
+															<span class="input-group-addon">即，人民币</span>
+															<input type="number" name="value-3-1" placeholder="一期支付费用：" class="form-control">
+															<span class="input-group-addon">万元</span>
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-3">
+													<div class="form-group">
+														<label for="script-name" class="sr-only">最迟支付天数：</label>
+														<input type="number" name="script-name" placeholder="最迟支付天数：" class="form-control">
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-sm-3">
+													<div class="form-group">
+														<label for="ratio-3-2" class="sr-only">二期支付比例：</label>
+														<div class="input-group">
+															<input type="number" name="ratio-3-2" placeholder="二期支付比例：" class="form-control">
+															<span class="input-group-addon">%</span>
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-6">
+													<div class="form-group">
+														<label for="value-3-2" class="sr-only">二期支付费用：</label>
+														<div class="input-group">
+															<span class="input-group-addon">即，人民币</span>
+															<input type="number" name="value-3-2" placeholder="二期支付费用：" class="form-control">
+															<span class="input-group-addon">万元</span>
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-3">
+													<div class="form-group">
+										                <div class='input-group date' id='datetimepicker7'>
+										                	<label for="script-name" class="sr-only">最迟支付日期：</label>
+										                    <input type='text' class="form-control" placeholder="最迟支付日期："/>
+										                    <span class="input-group-addon">
+										                        <i class="fa fa-calendar"></i>
+										                    </span>
+										                </div>
+										            </div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-sm-3">
+													<div class="form-group">
+														<label for="ratio-3-3" class="sr-only">三期支付比例：</label>
+														<div class="input-group">
+															<input type="number" name="ratio-3-3" placeholder="三期支付比例：" class="form-control">
+															<span class="input-group-addon">%</span>
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-6">
+													<div class="form-group">
+														<label for="value-3-3" class="sr-only">三期支付费用：</label>
+														<div class="input-group">
+															<span class="input-group-addon">即，人民币</span>
+															<input type="number" name="value-3-3" placeholder="三期支付费用：" class="form-control">
+															<span class="input-group-addon">万元</span>
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-3">
+													<div class="form-group">
+										                <div class='input-group date' id='datetimepicker8'>
+										                	<label for="script-name" class="sr-only">最迟支付日期：</label>
+										                    <input type='text' class="form-control" placeholder="最迟支付日期："/>
+										                    <span class="input-group-addon">
+										                        <i class="fa fa-calendar"></i>
+										                    </span>
+										                </div>
+										            </div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-sm-4">
+													<div class="form-group">
+														<label for="script-name" class="sr-only">户名：</label>
+														<input type="text" name="script-name" placeholder="户名：" class="form-control">
+													</div>
+												</div>
+												<div class="col-sm-8">
+													<div class="form-group">
+														<label for="script-name" class="sr-only">开户行：</label>
+														<input type="text" name="script-name" placeholder="开户行：" class="form-control">
+													</div>
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="script-name" class="sr-only">账号：</label>
+												<input type="number" name="script-name" placeholder="账号：" class="form-control">
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="script-name7">税费承担：</label>
+											<input type="radio" name="script-name7" value="含税" checked="true">含税
+											<input type="radio" name="script-name7" value="不含税">不含税
+										</div>
+
+										<div class="section-box">
+											<hr class="separator" /><p class="separator-title" id="section-6">知识产权归属</p><hr class="separator" />
+										</div>
+										<div class="form-group">
+											<label for="script-name" class="sr-only">新作品权属：</label>
+											<input type="text" name="script-name" placeholder="新作品权属：" class="form-control" value="电影、电视剧">
+										</div>
+										<div class="row">
+											<div class="col-sm-3">
+												<div class="form-group">
+													<label for="script-name" class="sr-only">作者：</label>
+													<input type="text" name="script-name" placeholder="作者：" class="form-control">
+												</div>
+											</div>
+											<div class="col-sm-9">
+												<div class="form-group">
+													<label for="script-name" class="sr-only">作品名称：</label>
+													<input type="text" name="script-name" placeholder="作品名称：" class="form-control">
+												</div>
+											</div>
+										</div>
+
+										<div class="section-box">
+											<hr class="separator" /><p class="separator-title" id="section-7">权利义务</p><hr class="separator" />
+										</div>
+										<div class="form-group">
+											<label for="script-name" class="sr-only">最晚通知天数：</label>
+											<input type="number" name="script-name" placeholder="最晚通知天数：" class="form-control">
+										</div>
+
+										<div class="section-box">
+											<hr class="separator" /><p class="separator-title" id="section-8">违约责任</p><hr class="separator" />
+										</div>
+											<div class="form-group">
+												<label for="script-name" class="sr-only">违约金比例：</label>
+												<div class="input-group">
+													<span class="input-group-addon">每逾期1天</span>
+													<input type="number" name="script-name" placeholder="违约金比例：" class="form-control">
+													<span class="input-group-addon">‰</span>
+												</div>
+											</div>
+
+										<div class="section-box">
+											<hr class="separator" /><p class="separator-title" id="section-9">合同解除</p><hr class="separator" />
+										</div>
+										<div class="form-group">
+											<label for="script-name" class="sr-only">最大未履约天数：</label>
+											<input type="number" name="script-name" placeholder="最大未履约天数：" class="form-control">
+										</div>
+										<div class="form-group">
+											<label for="script-name" class="sr-only">最大支付违约金天数：</label>
+											<input type="number" name="script-name" placeholder="最大支付违约金天数：" class="form-control">
+										</div>
+
+										<div class="section-box">
+											<hr class="separator" /><p class="separator-title" id="section-10">附则</p><hr class="separator" />
+										</div>
+										<div class="form-group">
+											<label for="script-name" class="sr-only">本合同份数：</label>
+											<input type="number" name="script-name" placeholder="本合同份数：" class="form-control">
+										</div>
+
 										<button type="submit" class="btn">提交合同信息</button>
 									</form>
 								</div>
@@ -212,6 +735,11 @@
 	<!-- 加载JS -->
 	<script src="https://cdn.bootcss.com/jquery/1.12.1/jquery.min.js"></script>
 	<script src="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="https://cdn.bootcss.com/moment.js/2.11.2/moment.min.js"></script>
+	<script src="https://cdn.bootcss.com/moment.js/2.11.2/locale/zh-cn.js"></script>
+	<script src="https://cdn.bootcss.com/moment.js/2.11.2/moment-with-locales.js"></script>
+	<script type="text/javascript" src="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
+	<script src="../js/contract-creater.js"></script>
 	<script src="../js/script.js"></script>
 </body>
 </html>
