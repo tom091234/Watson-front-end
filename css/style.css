@@ -1,144 +1,93 @@
-/* 默认参数 */
-
+/**************************************************
+ *
+ *
+ *
+ * body
+ *
+ *
+ *
+ **************************************************/
 body
 {
     font-family: 'Roboto', 'Noto Sans SC', sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 30px;
+    /* 用于相对定位 */
 
-    /* 用于绝对定位 */
     position: relative;
 
     text-align: center;
-
-    color: #fff;
-    background: -webkit-linear-gradient(#2482ac,#6162b8);
-    background:    -moz-linear-gradient(#2482ac,#6162b8);
-    background:     -ms-linear-gradient(#2482ac,#6162b8);
-    background:      -o-linear-gradient(#2482ac,#6162b8);
-    background:         linear-gradient(#2482ac,#6162b8);
-    background-color: #2482ac;
-    background-attachment: fixed;
 }
 
 .body-wrapper
 {
     overflow: hidden;
-    margin-top: 70px;
+
+    margin-top: 40px;
 }
 
-/* 默认参数end */
-
-/* 默认链接风格 */
-
-a,
-a:hover,
-a:focus,
-.nav>li>a,
-.nav>li>a:focus,
-.nav>li>a:hover,
-.dropdown-menu>li>a,
-.dropdown-menu>li>a:focus,
-.dropdown-menu>li>a:hover
+.p-btn
 {
-    -webkit-transition: all .3s;
-       -moz-transition: all .3s;
-        -ms-transition: all .3s;
-         -o-transition: all .3s;
-            transition: all .3s;
-    /* 无下划线 */
-    text-decoration: none;
-    /* 颜色纯白 */
-    background-color: inherit;
+    font-size: inherit !important;
+    line-height: 50px !important;
 
-    color: #fff;
+    margin: 0 !important;
+    padding: 0 20px !important;
+
+    -webkit-transition: all .2s ease !important;
+         -o-transition: all .2s ease !important;
+            transition: all .2s ease !important;
+    vertical-align: middle !important;
+
+    color: #fff !important;
+    border: 0 !important;
+    -webkit-border-radius: 0 !important;
+       -moz-border-radius: 0 !important;
+            border-radius: 0 !important;
+    background-color: #c0d23e !important;
+    -webkit-box-shadow: none !important;
+       -moz-box-shadow: none !important;
+            box-shadow: none !important;
+    text-shadow: none !important;
 }
 
-p a:hover,
-p a:focus
+.p-btn:hover
 {
-    /* 加1px的下边框 */
-    border-bottom: 1px dotted #fff;
+    background-color: #530d85 !important;
 }
 
-/* 默认链接风格end */
-
-/* 默认导航参数 */
-
-.navbar
+.s-btn
 {
-    background-color: rgba(0, 0, 0, .5);
-    margin-bottom: 0;
+    font-size: inherit !important;
+    line-height: 50px !important;
+
+    height: 50px !important;
+    margin: 0 !important;
+    padding: 0 20px !important;
+
+    -webkit-transition: all .2s ease !important;
+         -o-transition: all .2s ease !important;
+            transition: all .2s ease !important;
+    vertical-align: middle !important;
+
+    color: #000 !important;
+    border: 2px solid #202020 !important;
+    -webkit-border-radius: 0 !important;
+       -moz-border-radius: 0 !important;
+            border-radius: 0 !important;
+    background-color: transparent !important;
+    -webkit-box-shadow: none !important;
+       -moz-box-shadow: none !important;
+            box-shadow: none !important;
+    text-shadow: none !important;
 }
 
-.avatar
+.s-btn:hover
 {
-    height: 40px;
-    width: 40px;
-    -webkit-border-radius: 4px;
-       -moz-border-radius: 4px;
-            border-radius: 4px;
+    color: #fff !important;
+    background-color: #202020 !important;
 }
-
-nav *
-{
-    font-family: 'Roboto', 'Noto Sans SC', sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 30px;
-
-    text-align: center;
-
-    color: #fff;
-}
-
-nav .brand
-{
-    float: left;
-}
-
-.navbar-toggle span
-{
-    /* 蓝色 */
-    background-color: #19b9e7;
-}
-
-nav ul.dropdown-menu
-{
-    background-color: rgba(0, 0, 0, .5);
-}
-
-/* 导航栏中链接风格 */
-.navbar-nav>li>a
-{
-    padding: 0;
-    /* 此处与导航中图片高度一致 */
-    line-height: 32px;
-}
-
-.nav .open>a,
-.nav .open>a:focus,
-.nav .open>a:hover
-{
-    background-color: inherit;
-    color: inherit;
-}
-
-/* 默认导航参数end */
-
-/* 默认文本选择风格 字体颜色纯白，背景黑色透明 */
-::-moz-selection
-{
-    background: rgba(0,0,0,.4);
-    text-shadow: none;
-}
-::selection
-{
-    background: rgba(0,0,0,.4);
-    text-shadow: none;
-}
-/* 默认文本选择风格end */
 
 /* 默认段落风格 */
 .default-h1,
@@ -186,6 +135,47 @@ img
 }
 /* 默认图片风格end */
 
+/* 默认链接风格 */
+
+a,
+a:hover,
+a:focus
+{
+    -webkit-transition: all .3s;
+       -moz-transition: all .3s;
+        -ms-transition: all .3s;
+         -o-transition: all .3s;
+            transition: all .3s;
+    /* 无下划线 */
+    text-decoration: none;
+
+    color: #fff;
+    /* 颜色纯白 */
+    background-color: inherit;
+}
+
+p a:hover,
+p a:focus
+{
+    /* 加1px的下边框 */
+    border-bottom: 1px dotted #fff;
+}
+
+/* 默认链接风格end */
+
+/* 默认文本选择风格 字体颜色纯白，背景黑色透明 */
+::-moz-selection
+{
+    background: #c0d23e;
+    text-shadow: none;
+}
+::selection
+{
+    background: rgba(0,0,0,.4);
+    text-shadow: none;
+}
+/* 默认文本选择风格end */
+
 /* 按钮式链接风格 */
 .btn-link
 {
@@ -226,6 +216,295 @@ img
 }
 /* 按钮式链接风格end */
 
+/**************************************************
+ *
+ *
+ *
+ * top nav
+ *
+ *
+ *
+ **************************************************/
+
+nav
+{
+    margin-bottom: 0;
+
+    background-color: #000;
+}
+
+nav *
+{
+    font-family: 'Roboto', 'Noto Sans SC', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 30px;
+
+    text-align: center;
+
+    color: #fff;
+}
+
+/* 头像图片 */
+nav .avatar
+{
+    width: 40px;
+    height: 40px;
+
+    -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+            border-radius: 4px;
+}
+
+/* 网站logo */
+nav .brand
+{
+    float: left;
+}
+
+.navbar-toggle span
+{
+    background-color: #c0d23e;
+}
+
+/* 导航栏中链接风格 */
+
+.nav .open > a
+{
+    border: 0 !important;
+    background-color: #c0d23e !important;
+}
+
+.collapse > ul > li > a
+{
+    line-height: 32px;
+
+    padding: 0;
+
+    background-color: transparent;
+}
+
+.collapse.in > ul > li > a,
+.collapse > ul > li > a:hover,
+.collapse > ul > li > a:focus,
+.collapse > ul > li > a:active
+{
+    background-color: #c0d23e;
+}
+
+.dropdown-menu
+{
+    padding: 0;
+
+    border: 0;
+}
+
+.dropdown-menu > li > a
+{
+    color: #fff;
+    background-color: #c0d23e;
+}
+
+.dropdown-menu > li > a:hover
+{
+    transform: translate3d(3px, 0, 0);
+
+    color: #fff;
+    background-color: #c0d23e;
+}
+
+/**************************************************
+ *
+ *
+ *
+ * side nav
+ *
+ *
+ *
+ **************************************************/
+
+/* 侧边栏风格 */
+
+#side-nav-bar,
+#side-nav-bar a,
+#side-nav
+{
+    padding-right: 0;
+    padding-left: 0;
+
+    -webkit-border-radius: 0;
+       -moz-border-radius: 0;
+            border-radius: 0;
+}
+
+.side-nav
+{
+    /* 清除form-top-left的浮动 */
+    overflow: hidden;
+    /* padding部分，体现主题色 */
+
+    padding: 0;
+
+    text-align: center;
+    /* 下面左右2个圆角 */
+}
+
+.side-nav .navbar-toggle
+{
+    margin: 0;
+    padding: 10px;
+
+    border: none;
+    background-color: #202020;
+}
+
+.side-nav ul
+{
+    background-color: #202020;
+}
+
+#side-nav-bar
+{
+    position: fixed;
+}
+
+#side-nav-bar,
+#side-nav-bar button.navbar-toggle
+{
+    z-index: 999;
+
+    float: left;
+}
+
+#doc-create-view
+{
+    float: right;
+}
+
+/* 超小屏幕（手机，小于 768px） */
+@media (max-width: 767px)
+{
+    #doc-create-view
+    {
+        float: none;
+    }
+}
+
+/* 侧边栏风格end */
+
+/**************************************************
+ *
+ *
+ *
+ * footer
+ *
+ *
+ *
+ **************************************************/
+
+footer
+{
+    margin-top: 40px;
+    padding: 40px 0;
+
+    background-color: #202020;
+}
+
+footer .footer-border
+{
+    width: 200px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+
+    border-top: 1px solid #fff;
+}
+
+/* 默认footer风格end */
+
+/**************************************************
+ *
+ *
+ *
+ * nav-tabs
+ *
+ *
+ *
+ **************************************************/
+
+/* 合同生成表单 */
+
+#questionnaire
+{
+    margin-top: 0;
+    margin-bottom: 80px;
+}
+
+
+embed
+{
+    width: 100%;
+    height: 1000px;
+}
+
+.nav-tabs
+{
+    border-bottom: 0;
+}
+
+.nav-tabs > li > a
+{
+    -webkit-border-radius: 0;
+       -moz-border-radius: 0;
+            border-radius: 0;
+}
+
+.nav-tabs > li > a
+{
+    color: #000;
+    border: 2px solid #202020;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li > a:focus,
+.nav-tabs > li > a:hover
+{
+    color: #fff;
+    border: 2px solid #202020;
+    background-color: #202020;
+}
+
+.section-box
+{
+    overflow: hidden;
+}
+
+.separator-title
+{
+    float: left;
+}
+
+.separator
+{
+    float: left;
+
+    width: 50px;
+    margin-top: 14px;
+}
+
+/* 合同生成表单end */
+
+/**************************************************
+ *
+ *
+ *
+ * form
+ *
+ *
+ *
+ **************************************************/
+
 /* 默认form风格 */
 
 /* 最外层框架
@@ -235,6 +514,16 @@ img
     /* 占据整个栅格 */
     /* 向下偏移 */
     margin-top: 0;
+
+    color: #fff;
+}
+
+.form-box .form-control,
+.form-box .input-group-addon
+{
+    -webkit-border-radius: 0;
+       -moz-border-radius: 0;
+            border-radius: 0;
 }
 
 /* form标题部分
@@ -247,14 +536,8 @@ img
     padding: 0 25px 15px 25px;
 
     text-align: left;
-    /* 上面左右2个圆角 */
 
-    -webkit-border-radius: 4px 4px 0 0;
-       -moz-border-radius: 4px 4px 0 0;
-            border-radius: 4px 4px 0 0;
-    background: #444;
-    /* 背景黑色透明 */
-    background: rgba(0, 0, 0, .35);
+    background: #530d85;
 }
 
 .form-top-left
@@ -302,17 +585,13 @@ img
     /* 清除form-top-left的浮动 */
     overflow: hidden;
     /* padding部分，体现主题色 */
+
     padding: 25px 25px 30px 25px;
 
     text-align: left;
-    /* 下面左右2个圆角 */
 
-    -webkit-border-radius: 0 0 4px 4px;
-       -moz-border-radius: 0 0 4px 4px;
-            border-radius: 0 0 4px 4px;
-    background: #444;
-    /* 背景黑色透明 */
-    background: rgba(0, 0, 0, .3);
+    background: #530d85;
+    opacity: 0.9;
 }
 
 /* form中textarea默认参数 */
@@ -325,7 +604,13 @@ img
 .form-bottom form button.btn
 {
     width: 100%;
-    background-color: #F39C12;
+    height: 50px;
+
+    color: #fff;
+    -webkit-border-radius: 0;
+       -moz-border-radius: 0;
+            border-radius: 0;
+    background-color: #c0d23e ;
 }
 
 /* 校验出错后为控件添加的风格，由JS添加 */
@@ -356,9 +641,6 @@ form input[type='password'],
 
     color: #888;
     border: 3px solid #fff;
-    -webkit-border-radius: 4px;
-       -moz-border-radius: 4px;
-            border-radius: 4px;
     background: #fff;
     -webkit-box-shadow: none;
        -moz-box-shadow: none;
@@ -413,209 +695,27 @@ form textarea.form-control::-webkit-input-placeholder
 }
 /* 设置placeholder为灰色end */
 
-button.btn
+/* 时间选择按钮 */
+
+.bootstrap-datetimepicker-widget
 {
-    font-family: 'Roboto', 'Noto Sans SC', sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 50px;
-
-    height: 50px;
-    margin: 0;
-    padding: 0 20px;
-
-    -webkit-transition: all .3s;
-       -moz-transition: all .3s;
-        -ms-transition: all .3s;
-         -o-transition: all .3s;
-            transition: all .3s;
-    vertical-align: middle;
-
-    color: #fff;
-    border: 0;
-    -webkit-border-radius: 4px;
-       -moz-border-radius: 4px;
-            border-radius: 4px;
-    background: #19b9e7;
-    -webkit-box-shadow: none;
-       -moz-box-shadow: none;
-            box-shadow: none;
-    text-shadow: none;
-}
-
-button.btn:hover
-{
-    opacity: .6;
-    color: #fff;
-}
-
-button.btn:active
-{
-    opacity: .6;
-    color: #fff;
-    outline: 0;
-    -webkit-box-shadow: none;
-       -moz-box-shadow: none;
-            box-shadow: none;
-}
-
-button.btn:focus
-{
-    opacity: .6;
-    color: #fff;
-    outline: 0;
-    background: #19b9e7;
-}
-
-button.btn:active:focus,
-button.btn.active:focus
-{
-    opacity: .6;
-    color: #fff;
-    outline: 0;
-    background: #19b9e7;
+    color: #000;
+    background-color: #fff;
 }
 
 /* 默认form风格end */
 
-/* 侧边栏风格 */
 
-#side-nav-bar,
-#side-nav-bar a,
-#side-nav
-{
-    padding-left: 0;
-    padding-right: 0;
-}
 
-.side-nav
-{
-    /* 清除form-top-left的浮动 */
-    overflow: hidden;
-    /* padding部分，体现主题色 */
-    padding: 0;
-
-    text-align: center;
-    /* 下面左右2个圆角 */
-
-    -webkit-border-radius: 4px 4px 4px 4px;
-       -moz-border-radius: 4px 4px 4px 4px;
-            border-radius: 4px 4px 4px 4px;
-}
-
-.side-nav .navbar-toggle
-{
-    padding: 10px;
-    margin:0;
-    border: none;
-    /* 背景黑色透明 */
-    background-color: rgba(0, 0, 0, .3);
-}
-
-.side-nav ul
-{
-    background-color: rgba(0, 0, 0, .3);
-}
-
-#side-nav-bar
-{
-    position: fixed;
-}
-
-#side-nav-bar,
-#side-nav-bar button.navbar-toggle 
-{
-    float: left;
-    z-index: 999;
-}
-
-#doc-create-view
-{
-    float: right;
-}
-
-/* 超小屏幕（手机，小于 768px） */
-@media (max-width: 767px) {
-    #doc-create-view
-    {
-        float: none;
-    }
-}
-
-/* 侧边栏风格end */
-
-/* 合同生成表单 */
-
-#questionnaire
-{
-    margin-top: 0;
-}
-
-#switch-bar
-{
-    border-bottom: 0;
-}
-
-embed
-{
-    width: 100%;
-    height: 1000px;
-}
-
-#switch-bar>li.active>a,
-#switch-bar>li.active>a:focus,
-#switch-bar>li.active>a:hover,
-#switch-bar>li>a:focus,
-#switch-bar>li>a:hover
-{
-    background-color: rgba(0,0,0,0.3);
-    color: #fff;
-    border:0;
-}
-
-.section-box
-{
-    overflow: hidden;
-}
-
-.separator-title
-{
-    float: left;
-}
-
-.separator
-{
-    float: left;
-    width: 50px;
-    margin-top: 14px;
-}
-
-/* 合同生成表单end */
-
-/* 默认footer风格 */
-
-footer
-{
-    padding-top: 40px;
-    padding-bottom: 70px;
-}
-
-footer .footer-border
-{
-    width: 200px;
-    margin: 0 auto;
-    padding-bottom: 30px;
-
-    border-top: 1px solid #fff;
-    border-top: 1px solid rgba(255, 255, 255, .6);
-}
-
-footer p
-{
-    opacity: .8;
-}
-
-/* 默认footer风格end */
+/**************************************************
+ *
+ *
+ *
+ * go to top
+ *
+ *
+ *
+ **************************************************/
 
 /* 返回顶部按钮 */
 
@@ -630,7 +730,10 @@ footer p
 
     color: #fff;
     border: none;
-    background-color: rgba(0, 0, 0, .5);
+    -webkit-border-radius: 0;
+       -moz-border-radius: 0;
+            border-radius: 0;
+    background-color: #c0d23e ;
 }
 
 /* affix-top时显示在window之外 */
@@ -639,7 +742,6 @@ footer p
     position: absolute;
     right: 10px;
     bottom: -10px;
-
 }
 #top-link-block.affix
 {
@@ -649,53 +751,65 @@ footer p
 
 /* 返回顶部按钮end */
 
+/**************************************************
+ *
+ *
+ *
+ * table
+ *
+ *
+ *
+ **************************************************/
+
+
 /* 列表风格 */
 
-table>caption
+table > caption
 {
+    text-align: left;
+
     color: #fff;
-    text-align:left;
 }
 
 table thead th,
 table tbody td
 {
-    text-align:center;
+    text-align: center;
 }
 
 .table_select
 {
-    background-color:transparent;
     color: #fff;
     border: none;
     -webkit-border-radius: 4px 4px 4px 4px;
        -moz-border-radius: 4px 4px 4px 4px;
             border-radius: 4px 4px 4px 4px;
+    background-color: transparent;
 }
 
 .page_option
 {
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,.3);
 }
 
 
 table input,
 table input:focus
 {
-    background-color:transparent;
-    border: none;
     text-align: center;
+
+    border: none;
+    background-color: transparent;
 }
-
-
 
 input[type='search']
 {
-    border: none;
-    color: #000;
-    height: 50px;
     font-size: 20px;
 
+    height: 50px;
+
+    color: #000;
+    border: none;
     -webkit-border-radius: 90px 0 0 90px;
        -moz-border-radius: 90px 0 0 90px;
             border-radius: 90px 0 0 90px;
@@ -703,12 +817,14 @@ input[type='search']
 
 button.search_btn
 {
-    background-color: #fff;
-    color: #000;
     font-size: 20px;
-    -webkit-border-radius: 0 90px 90px 0;
-       -moz-border-radius: 0 90px 90px 0;
-            border-radius: 0 90px 90px 0;
+    border: 0;
+    color: #000;
+    -webkit-border-radius: 0;
+       -moz-border-radius: 0;
+            border-radius: 0;
+    background-color: #fff;
+    padding: 11px;
 }
 
 div.search_div
@@ -721,39 +837,38 @@ div.search_div
     margin: 7px;
 }
 
-.pagination li
-{
-}
 
-.pagination>li>a,
-.pagination>li>a:focus,
-.pagination>li>a:hover,
-.pagination>li>span:focus,
-.pagination>li>span:hover 
+
+.pagination > li > a,
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover
 {
-    background-color: rgba(0,0,0,0.3);
     color: #fff;
     border: none;
+    background-color: rgba(0,0,0,.3);
 }
 
-.pagination>li>a.active
+.pagination > li > a.active
 {
-    background-color: #fff;
     color: #000;
+    background-color: #fff;
 }
 
-.pagination>li:first-child>a.disabled,
-.pagination>li:first-child>span.disabled,
-.pagination>li:last-child>a.disabled,
-.pagination>li:last-child>span.disabled
+.pagination > li:first-child > a.disabled,
+.pagination > li:first-child > span.disabled,
+.pagination > li:last-child > a.disabled,
+.pagination > li:last-child > span.disabled
 {
     /*background-color: #fff;*/
 }
 
 button.table-submit
 {
-    height: 44px;
     float: right;
+
+    height: 44px;
 }
 
 /* 列表风格end */
@@ -762,10 +877,11 @@ button.table-submit
 
 .jumbotron
 {
-    background:url(../img/jumbotron.jpg);
-    background-repeat:no-repeat;
     height: 600px;
-    background-position:center;
+
+    background: url(../img/jumbotron.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 /* 巨幕end */
@@ -779,8 +895,8 @@ button.table-submit
 
 .thumbnail
 {
-    background-color: rgba(0,0,0,0.3);
     border: 0;
+    background-color: rgba(0,0,0,.3);
 }
 
 .thumbnail h3,
@@ -791,8 +907,9 @@ button.table-submit
 
 .thumbnail i
 {
-    margin:20px;
     font-size: 10em;
+
+    margin: 20px;
 }
 
 /* 缩略图介绍end */
@@ -803,24 +920,18 @@ button.table-submit
 .guider-wrapper
 {
     position: relative;
+
     display: table;
 }
 
 .guider-view
 {
-    background-color: rgba(0,0,0,0.3) !important;
-    width:80% !important;
-    margin-left: 10% !important;
+    width: 80% !important;
     margin-right: 10% !important;
     margin-bottom: 5px !important;
+    margin-left: 10% !important;
+
+    background-color: rgba(0,0,0,.3) !important;
 }
 
 /* 向导end */
-
-/* 时间选择按钮 */
-
-.bootstrap-datetimepicker-widget
-{
-    color: #000;
-    background-color: #fff;
-}

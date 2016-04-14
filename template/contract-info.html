@@ -5,8 +5,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>生成合同</title>
-    <meta name="description" content="影视合同生成生成页面">
+	<title>合同管理</title>
+    <meta name="description" content="合同管理页面">
     <meta name="author" content="xiao kai, peng">
 
     <!-- 导入Roboto字体
@@ -16,6 +16,8 @@
 
 	<link href="https://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 	<link href="https://cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+	<link href="https://cdn.bootcss.com/fullcalendar/2.6.1/fullcalendar.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="../css/style.css">
 
     <!-- 加载各种icon -->
@@ -81,283 +83,345 @@
 		</nav>
 	</header>
 
-	<main>
+	<main class="body-wrapper">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-12">
-					<div class="form-box">
-						<div class="form-top">
-							<div class="form-top-left">
-								<h3 class="default-h3">
-									合同列表
-								</h3>
-								<p>
-									单击合同进入管理页面
-								</p>
+				<div class="col-sm-12" id="doc-info-view">
+					<ul class="nav nav-tabs" id="switch-bar">
+						<li role="presentation" class="active"><a href="#table-view" aria-controls="home" role="tab" data-toggle="tab">合同列表</a></li>
+						<li role="presentation"><a href="#calendar-view" aria-controls="profile" role="tab" data-toggle="tab">日历管理</a></li>
+					</ul>
+
+					<div class="tab-content">
+						<div role="tabpanel" class="tab-pane active" id="table-view">
+							<div class="row">
+								<div class="col-sm-12">
+									<div class="form-box">
+										<div class="form-top">
+											<div class="form-top-left">
+												<h3 class="default-h3">
+													合同列表
+												</h3>
+												<p>
+													单击合同进入管理页面
+												</p>
+											</div>
+											<div class="form-top-right">
+												<i class="fa fa-table"></i>
+											</div>
+										</div>
+										<div class="form-bottom">
+										    <div class="input-group search_div">
+										      <input type="search" class="form-control" placeholder="在您的合同中搜索...">
+										      <span class="input-group-btn">
+										        <button class="btn btn-default search_btn" type="button"><span class="fa fa-search"></span></button>
+										      </span>
+										    </div>
+											<div class="table-responsive table-striped table-hover">
+												<table class="table">
+													<caption>您共有80份合同，显示第1-10份合同...</caption>
+													<thead>
+														<tr>
+															<th>合同编号</th>
+															<th>合同名称</th>
+															<th>合同类型</th>
+															<th>状态</th>
+															<th>法律状态</th>
+															<th>待办事项</th>
+															<th>标签</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td><input type="text" name="num+id" value="沪123456789"></td>
+															<td><input type="text" name="name+id" value="奥特曼暴打小怪兽"></td>
+															<td>影视合同</td>
+															<td>已审核</td>
+															<td>
+																<select class="table_select">
+																	<option value="agree+id" class="label label-success">生效</option>
+																	<option value="disagree+id" class="label label-danger">未生效</option>
+																</select>
+															</td>
+															<td><a href="#">编辑</a></td>
+															<td>
+																<select class="table_select">
+																	<option value="earn+id" class="label label-success">赚钱</option>
+																	<option value="lose+id" class="label label-danger">赔钱</option>
+																</select>
+															</td>
+														</tr>
+														<tr>
+															<td><input type="text" name="num+id" value="沪123456789"></td>
+															<td><input type="text" name="name+id" value="奥特曼暴打小怪兽"></td>
+															<td>影视合同</td>
+															<td>已审核</td>
+															<td>
+																<select class="table_select">
+																	<option value="agree+id" class="label label-success">生效</option>
+																	<option value="disagree+id" class="label label-danger">未生效</option>
+																</select>
+															</td>
+															<td><a href="#">编辑</a></td>
+															<td>
+																<select class="table_select">
+																	<option value="earn+id" class="label label-success">赚钱</option>
+																	<option value="lose+id" class="label label-danger">赔钱</option>
+																</select>
+															</td>
+														</tr>
+														<tr>
+															<td><input type="text" name="num+id" value="沪123456789"></td>
+															<td><input type="text" name="name+id" value="奥特曼暴打小怪兽"></td>
+															<td>影视合同</td>
+															<td>已审核</td>
+															<td>
+																<select class="table_select">
+																	<option value="agree+id" class="label label-success">生效</option>
+																	<option value="disagree+id" class="label label-danger">未生效</option>
+																</select>
+															</td>
+															<td><a href="#">编辑</a></td>
+															<td>
+																<select class="table_select">
+																	<option value="earn+id" class="label label-success">赚钱</option>
+																	<option value="lose+id" class="label label-danger">赔钱</option>
+																</select>
+															</td>
+														</tr>
+														<tr>
+															<td><input type="text" name="num+id" value="沪123456789"></td>
+															<td><input type="text" name="name+id" value="奥特曼暴打小怪兽"></td>
+															<td>影视合同</td>
+															<td>已审核</td>
+															<td>
+																<select class="table_select">
+																	<option value="agree+id" class="label label-success">生效</option>
+																	<option value="disagree+id" class="label label-danger">未生效</option>
+																</select>
+															</td>
+															<td><a href="#">编辑</a></td>
+															<td>
+																<select class="table_select">
+																	<option value="earn+id" class="label label-success">赚钱</option>
+																	<option value="lose+id" class="label label-danger">赔钱</option>
+																</select>
+															</td>
+														</tr>
+														<tr>
+															<td><input type="text" name="num+id" value="沪123456789"></td>
+															<td><input type="text" name="name+id" value="奥特曼暴打小怪兽"></td>
+															<td>影视合同</td>
+															<td>已审核</td>
+															<td>
+																<select class="table_select">
+																	<option value="agree+id" class="label label-success">生效</option>
+																	<option value="disagree+id" class="label label-danger">未生效</option>
+																</select>
+															</td>
+															<td><a href="#">编辑</a></td>
+															<td>
+																<select class="table_select">
+																	<option value="earn+id" class="label label-success">赚钱</option>
+																	<option value="lose+id" class="label label-danger">赔钱</option>
+																</select>
+															</td>
+														</tr>
+														<tr>
+															<td><input type="text" name="num+id" value="沪123456789"></td>
+															<td><input type="text" name="name+id" value="奥特曼暴打小怪兽"></td>
+															<td>影视合同</td>
+															<td>已审核</td>
+															<td>
+																<select class="table_select">
+																	<option value="agree+id" class="label label-success">生效</option>
+																	<option value="disagree+id" class="label label-danger">未生效</option>
+																</select>
+															</td>
+															<td><a href="#">编辑</a></td>
+															<td>
+																<select class="table_select">
+																	<option value="earn+id" class="label label-success">赚钱</option>
+																	<option value="lose+id" class="label label-danger">赔钱</option>
+																</select>
+															</td>
+														</tr>
+														<tr>
+															<td><input type="text" name="num+id" value="沪123456789"></td>
+															<td><input type="text" name="name+id" value="奥特曼暴打小怪兽"></td>
+															<td>影视合同</td>
+															<td>已审核</td>
+															<td>
+																<select class="table_select">
+																	<option value="agree+id" class="label label-success">生效</option>
+																	<option value="disagree+id" class="label label-danger">未生效</option>
+																</select>
+															</td>
+															<td><a href="#">编辑</a></td>
+															<td>
+																<select class="table_select">
+																	<option value="earn+id" class="label label-success">赚钱</option>
+																	<option value="lose+id" class="label label-danger">赔钱</option>
+																</select>
+															</td>
+														</tr>
+														<tr>
+															<td><input type="text" name="num+id" value="沪123456789"></td>
+															<td><input type="text" name="name+id" value="奥特曼暴打小怪兽"></td>
+															<td>影视合同</td>
+															<td>已审核</td>
+															<td>
+																<select class="table_select">
+																	<option value="agree+id" class="label label-success">生效</option>
+																	<option value="disagree+id" class="label label-danger">未生效</option>
+																</select>
+															</td>
+															<td><a href="#">编辑</a></td>
+															<td>
+																<select class="table_select">
+																	<option value="earn+id" class="label label-success">赚钱</option>
+																	<option value="lose+id" class="label label-danger">赔钱</option>
+																</select>
+															</td>
+														</tr>
+														<tr>
+															<td><input type="text" name="num+id" value="沪123456789"></td>
+															<td><input type="text" name="name+id" value="奥特曼暴打小怪兽"></td>
+															<td>影视合同</td>
+															<td>已审核</td>
+															<td>
+																<select class="table_select">
+																	<option value="agree+id" class="label label-success">生效</option>
+																	<option value="disagree+id" class="label label-danger">未生效</option>
+																</select>
+															</td>
+															<td><a href="#">编辑</a></td>
+															<td>
+																<select class="table_select">
+																	<option value="earn+id" class="label label-success">赚钱</option>
+																	<option value="lose+id" class="label label-danger">赔钱</option>
+																</select>
+															</td>
+														</tr>
+														<tr>
+															<td><input type="text" name="num+id" value="沪123456789"></td>
+															<td><input type="text" name="name+id" value="奥特曼暴打小怪兽"></td>
+															<td>影视合同</td>
+															<td>已审核</td>
+															<td>
+																<select class="table_select">
+																	<option value="agree+id" class="label label-success">生效</option>
+																	<option value="disagree+id" class="label label-danger">未生效</option>
+																</select>
+															</td>
+															<td><a href="#">编辑</a></td>
+															<td>
+																<select class="table_select">
+																	<option value="earn+id" class="label label-success">赚钱</option>
+																	<option value="lose+id" class="label label-danger">赔钱</option>
+																</select>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
-							<div class="form-top-right">
-								<i class="fa fa-table"></i>
+							<div class="row">
+								<div class="col-sm-3">
+									<label>
+										每页显示
+											<select class="table_select">
+												<option value="10" class="page_option">10</option>
+												<option value="20" class="page_option">20</option>
+												<option value="30" class="page_option">30</option>
+												<option value="40" class="page_option">40</option>
+												<option value="50" class="page_option">50</option>
+												<option value="100" class="page_option">100</option>
+											</select>
+										份合同
+									</label>
+								</div>
+								<div class="col-sm-7">
+									<nav>
+										<ul class="pagination">
+											<li>
+												<a href="#" aria-label="上一页" class="disabled">
+													<span aria-hidden="true" class="fa fa-chevron-left"></span>
+													上一页
+												</a>
+											</li>
+											<li><a href="#" class="active">1</a></li>
+											<li><a href="#">2</a></li>
+											<li><a href="#">3</a></li>
+											<li><a href="#">4</a></li>
+											<li><a href="#">5</a></li>
+											<li>
+												<a href="#" aria-label="下一页">
+													下一页
+													<span aria-hidden="true" class="fa fa-chevron-right"></span>
+												</a>
+											</li>
+										</ul>
+									</nav>
+								</div>
+								<div class="col-sm-2">
+									<button type="submit" class="btn table-submit">提交修改</button>
+								</div>
 							</div>
 						</div>
-						<div class="form-bottom">
-						    <div class="input-group search_div">
-						      <input type="search" class="form-control" placeholder="在您的合同中搜索...">
-						      <span class="input-group-btn">
-						        <button class="btn btn-default search_btn" type="button"><span class="fa fa-search"></span></button>
-						      </span>
-						    </div>
-							<div class="table-responsive table-striped table-hover">
-								<table class="table">
-									<caption>您共有80份合同，显示第1-10份合同...</caption>
-									<thead>
-										<tr>
-											<th>合同编号</th>
-											<th>合同名称</th>
-											<th>合同类型</th>
-											<th>状态</th>
-											<th>法律状态</th>
-											<th>待办事项</th>
-											<th>标签</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td><input type="text" name="num+id" value="沪123456789"></td>
-											<td><input type="text" name="name+id" value="奥特曼暴打小怪兽"></td>
-											<td>影视合同</td>
-											<td>已审核</td>
-											<td>
-												<select class="table_select">
-													<option value="agree+id" class="label label-success">生效</option>
-													<option value="disagree+id" class="label label-danger">未生效</option>
-												</select>
-											</td>
-											<td><a href="#">编辑</a></td>
-											<td>
-												<select class="table_select">
-													<option value="earn+id" class="label label-success">赚钱</option>
-													<option value="lose+id" class="label label-danger">赔钱</option>
-												</select>
-											</td>
-										</tr>
-										<tr>
-											<td><input type="text" name="num+id" value="沪123456789"></td>
-											<td><input type="text" name="name+id" value="奥特曼暴打小怪兽"></td>
-											<td>影视合同</td>
-											<td>已审核</td>
-											<td>
-												<select class="table_select">
-													<option value="agree+id" class="label label-success">生效</option>
-													<option value="disagree+id" class="label label-danger">未生效</option>
-												</select>
-											</td>
-											<td><a href="#">编辑</a></td>
-											<td>
-												<select class="table_select">
-													<option value="earn+id" class="label label-success">赚钱</option>
-													<option value="lose+id" class="label label-danger">赔钱</option>
-												</select>
-											</td>
-										</tr>
-										<tr>
-											<td><input type="text" name="num+id" value="沪123456789"></td>
-											<td><input type="text" name="name+id" value="奥特曼暴打小怪兽"></td>
-											<td>影视合同</td>
-											<td>已审核</td>
-											<td>
-												<select class="table_select">
-													<option value="agree+id" class="label label-success">生效</option>
-													<option value="disagree+id" class="label label-danger">未生效</option>
-												</select>
-											</td>
-											<td><a href="#">编辑</a></td>
-											<td>
-												<select class="table_select">
-													<option value="earn+id" class="label label-success">赚钱</option>
-													<option value="lose+id" class="label label-danger">赔钱</option>
-												</select>
-											</td>
-										</tr>
-										<tr>
-											<td><input type="text" name="num+id" value="沪123456789"></td>
-											<td><input type="text" name="name+id" value="奥特曼暴打小怪兽"></td>
-											<td>影视合同</td>
-											<td>已审核</td>
-											<td>
-												<select class="table_select">
-													<option value="agree+id" class="label label-success">生效</option>
-													<option value="disagree+id" class="label label-danger">未生效</option>
-												</select>
-											</td>
-											<td><a href="#">编辑</a></td>
-											<td>
-												<select class="table_select">
-													<option value="earn+id" class="label label-success">赚钱</option>
-													<option value="lose+id" class="label label-danger">赔钱</option>
-												</select>
-											</td>
-										</tr>
-										<tr>
-											<td><input type="text" name="num+id" value="沪123456789"></td>
-											<td><input type="text" name="name+id" value="奥特曼暴打小怪兽"></td>
-											<td>影视合同</td>
-											<td>已审核</td>
-											<td>
-												<select class="table_select">
-													<option value="agree+id" class="label label-success">生效</option>
-													<option value="disagree+id" class="label label-danger">未生效</option>
-												</select>
-											</td>
-											<td><a href="#">编辑</a></td>
-											<td>
-												<select class="table_select">
-													<option value="earn+id" class="label label-success">赚钱</option>
-													<option value="lose+id" class="label label-danger">赔钱</option>
-												</select>
-											</td>
-										</tr>
-										<tr>
-											<td><input type="text" name="num+id" value="沪123456789"></td>
-											<td><input type="text" name="name+id" value="奥特曼暴打小怪兽"></td>
-											<td>影视合同</td>
-											<td>已审核</td>
-											<td>
-												<select class="table_select">
-													<option value="agree+id" class="label label-success">生效</option>
-													<option value="disagree+id" class="label label-danger">未生效</option>
-												</select>
-											</td>
-											<td><a href="#">编辑</a></td>
-											<td>
-												<select class="table_select">
-													<option value="earn+id" class="label label-success">赚钱</option>
-													<option value="lose+id" class="label label-danger">赔钱</option>
-												</select>
-											</td>
-										</tr>
-										<tr>
-											<td><input type="text" name="num+id" value="沪123456789"></td>
-											<td><input type="text" name="name+id" value="奥特曼暴打小怪兽"></td>
-											<td>影视合同</td>
-											<td>已审核</td>
-											<td>
-												<select class="table_select">
-													<option value="agree+id" class="label label-success">生效</option>
-													<option value="disagree+id" class="label label-danger">未生效</option>
-												</select>
-											</td>
-											<td><a href="#">编辑</a></td>
-											<td>
-												<select class="table_select">
-													<option value="earn+id" class="label label-success">赚钱</option>
-													<option value="lose+id" class="label label-danger">赔钱</option>
-												</select>
-											</td>
-										</tr>
-										<tr>
-											<td><input type="text" name="num+id" value="沪123456789"></td>
-											<td><input type="text" name="name+id" value="奥特曼暴打小怪兽"></td>
-											<td>影视合同</td>
-											<td>已审核</td>
-											<td>
-												<select class="table_select">
-													<option value="agree+id" class="label label-success">生效</option>
-													<option value="disagree+id" class="label label-danger">未生效</option>
-												</select>
-											</td>
-											<td><a href="#">编辑</a></td>
-											<td>
-												<select class="table_select">
-													<option value="earn+id" class="label label-success">赚钱</option>
-													<option value="lose+id" class="label label-danger">赔钱</option>
-												</select>
-											</td>
-										</tr>
-										<tr>
-											<td><input type="text" name="num+id" value="沪123456789"></td>
-											<td><input type="text" name="name+id" value="奥特曼暴打小怪兽"></td>
-											<td>影视合同</td>
-											<td>已审核</td>
-											<td>
-												<select class="table_select">
-													<option value="agree+id" class="label label-success">生效</option>
-													<option value="disagree+id" class="label label-danger">未生效</option>
-												</select>
-											</td>
-											<td><a href="#">编辑</a></td>
-											<td>
-												<select class="table_select">
-													<option value="earn+id" class="label label-success">赚钱</option>
-													<option value="lose+id" class="label label-danger">赔钱</option>
-												</select>
-											</td>
-										</tr>
-										<tr>
-											<td><input type="text" name="num+id" value="沪123456789"></td>
-											<td><input type="text" name="name+id" value="奥特曼暴打小怪兽"></td>
-											<td>影视合同</td>
-											<td>已审核</td>
-											<td>
-												<select class="table_select">
-													<option value="agree+id" class="label label-success">生效</option>
-													<option value="disagree+id" class="label label-danger">未生效</option>
-												</select>
-											</td>
-											<td><a href="#">编辑</a></td>
-											<td>
-												<select class="table_select">
-													<option value="earn+id" class="label label-success">赚钱</option>
-													<option value="lose+id" class="label label-danger">赔钱</option>
-												</select>
-											</td>
-										</tr>
-									</tbody>
-								</table>
+						<div role="tabpanel" class="tab-pane" id="calendar-view">
+							<div class="row">
+								<div class="col-sm-12">
+									<div id="calendar">
+									</div>
+
+									<div class="modal fade" id="add-event" tabindex="-1" role="dialog" aria-labelledby="Label">
+										<div class="modal-dialog" role="document">
+											<div class="modal-content">
+												<div class="modal-header">
+													<button type="button" class="close" data-dismiss="modal" aria-label="关闭">
+														<span aria-hidden="true">&times;</span>
+													</button>
+													<h4 class="modal-title" id="Label">添加事件</h4>
+												</div>
+												<div class="modal-body">
+													<div class="form-group">
+														<label for="script-content" class="sr-only">事件说明</label>
+														<textarea name="script-content" placeholder="事件说明" class="form-control"></textarea>
+													</div>
+													<div class="form-group">
+										                <div class='input-group date' id='datetimepicker1'>
+										                	<label for="script-name" class="sr-only">开始时间</label>
+										                    <input type='text' class="form-control" placeholder="开始时间"/>
+										                    <span class="input-group-addon">
+										                        <i class="fa fa-calendar"></i>
+										                    </span>
+										                </div>
+										            </div>
+												<div class="form-group">
+									                <div class='input-group date' id='datetimepicker2'>
+									                	<label for="script-name" class="sr-only">结束时间</label>
+									                    <input type='text' class="form-control" placeholder="结束时间"/>
+									                    <span class="input-group-addon">
+									                        <i class="fa fa-calendar"></i>
+									                    </span>
+									                </div>
+									            </div>
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+													<button type="button" class="btn btn-primary">保存事件</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-3">
-					<label>
-						每页显示
-							<select class="table_select">
-								<option value="10" class="page_option">10</option>
-								<option value="20" class="page_option">20</option>
-								<option value="30" class="page_option">30</option>
-								<option value="40" class="page_option">40</option>
-								<option value="50" class="page_option">50</option>
-								<option value="100" class="page_option">100</option>
-							</select>
-						份合同
-					</label>
-				</div>
-				<div class="col-sm-7">
-					<nav>
-						<ul class="pagination">
-							<li>
-								<a href="#" aria-label="上一页" class="disabled">
-									<span aria-hidden="true" class="fa fa-chevron-left"></span>
-									上一页
-								</a>
-							</li>
-							<li><a href="#" class="active">1</a></li>
-							<li><a href="#">2</a></li>
-							<li><a href="#">3</a></li>
-							<li><a href="#">4</a></li>
-							<li><a href="#">5</a></li>
-							<li>
-								<a href="#" aria-label="下一页">
-									下一页
-									<span aria-hidden="true" class="fa fa-chevron-right"></span>
-								</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
-				<div class="col-sm-2">
-					<button type="submit" class="btn table-submit">提交修改</button>
 				</div>
 			</div>
 		</div>
@@ -384,6 +448,12 @@
 	<!-- 加载JS -->
 	<script src="https://cdn.bootcss.com/jquery/1.12.1/jquery.min.js"></script>
 	<script src="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="https://cdn.bootcss.com/moment.js/2.11.2/moment.min.js"></script>
+	<script type="text/javascript" src="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
+	<script src="https://cdn.bootcss.com/fullcalendar/2.6.1/fullcalendar.min.js"></script>
+	<script src="https://cdn.bootcss.com/fullcalendar/2.6.1/lang/zh-cn.js"></script>
 	<script src="../js/script.js"></script>
+	<script src="../js/contract-info.js"></script>
 </body>
 </html>
+

@@ -17,6 +17,7 @@
 	<link href="https://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 	<link href="https://cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+	<link href="https://cdn.bootcss.com/hint.css/2.1.0/hint.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="../css/style.css">
 
     <!-- 加载各种icon -->
@@ -358,13 +359,13 @@
 											<input type="radio" name="script-name5" value="独占专有性许可">独占专有性许可
 										</div>
 										<div class="form-group">
-											<label for="script-name6">转许可权：</label>
+											<label for="script-name6" data-hint="甲方是否有权将许可权利转许可其他第三方行使">转许可权：</label>
 											<input type="radio" name="script-name6" value="有">有
 											<input type="radio" name="script-name6" value="无" checked="true">无
 										</div>
 										<div class="form-group">
 											<label for="script-name" class="sr-only">转许可最迟通知甲方天数：</label>
-											<input type="number" name="script-name" placeholder="转许可最迟通知甲方天数：" class="form-control">
+											<input type="number" name="script-name" placeholder="转许可最迟通知甲方天数：" class="form-control" min="1" value="15">
 										</div>
 
 										<div class="section-box">
