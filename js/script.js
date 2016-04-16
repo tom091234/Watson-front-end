@@ -9,25 +9,3 @@ $(document).ready(function() {
 	}
 });
 
-//设置侧边栏的宽度
-$(document).ready(function() {
-    $('#side-nav-bar').width($('#doc-create-view').width()/3);
-});
-
-$(window).resize(function() {
-    $('#side-nav-bar').width($('#doc-create-view').width()/3);
-});
-
-//侧边栏悬浮
-$(document).ready(function() {
-    $('#side-nav-bar').affix({
-        offset: {
-        	top: function () {
-        		return (this.bottom = $('nav').outerHeight(true))
-        	},
-        	bottom: function () {
-        		return (this.bottom = $('footer').outerHeight(true))
-        	}
-        }
-    });
-});

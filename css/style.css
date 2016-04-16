@@ -317,85 +317,6 @@ nav .brand
  *
  *
  *
- * side nav
- *
- *
- *
- **************************************************/
-
-/* 侧边栏风格 */
-
-#side-nav-bar,
-#side-nav-bar a,
-#side-nav
-{
-    padding-right: 0;
-    padding-left: 0;
-
-    -webkit-border-radius: 0;
-       -moz-border-radius: 0;
-            border-radius: 0;
-}
-
-.side-nav
-{
-    /* 清除form-top-left的浮动 */
-    overflow: hidden;
-    /* padding部分，体现主题色 */
-
-    padding: 0;
-
-    text-align: center;
-    /* 下面左右2个圆角 */
-}
-
-.side-nav .navbar-toggle
-{
-    margin: 0;
-    padding: 10px;
-
-    border: none;
-    background-color: #202020;
-}
-
-.side-nav ul
-{
-    background-color: #202020;
-}
-
-#side-nav-bar
-{
-    position: fixed;
-}
-
-#side-nav-bar,
-#side-nav-bar button.navbar-toggle
-{
-    z-index: 999;
-
-    float: left;
-}
-
-#doc-create-view
-{
-    float: right;
-}
-
-/* 超小屏幕（手机，小于 768px） */
-@media (max-width: 767px)
-{
-    #doc-create-view
-    {
-        float: none;
-    }
-}
-
-/* 侧边栏风格end */
-
-/**************************************************
- *
- *
- *
  * footer
  *
  *
@@ -420,80 +341,6 @@ footer .footer-border
 }
 
 /* 默认footer风格end */
-
-/**************************************************
- *
- *
- *
- * nav-tabs
- *
- *
- *
- **************************************************/
-
-/* 合同生成表单 */
-
-#questionnaire
-{
-    margin-top: 0;
-    margin-bottom: 80px;
-}
-
-
-embed
-{
-    width: 100%;
-    height: 1000px;
-}
-
-.nav-tabs
-{
-    border-bottom: 0;
-}
-
-.nav-tabs > li > a
-{
-    -webkit-border-radius: 0;
-       -moz-border-radius: 0;
-            border-radius: 0;
-}
-
-.nav-tabs > li > a
-{
-    color: #000;
-    border: 2px solid #202020;
-}
-
-.nav-tabs > li.active > a,
-.nav-tabs > li.active > a:focus,
-.nav-tabs > li.active > a:hover,
-.nav-tabs > li > a:focus,
-.nav-tabs > li > a:hover
-{
-    color: #fff;
-    border: 2px solid #202020;
-    background-color: #202020;
-}
-
-.section-box
-{
-    overflow: hidden;
-}
-
-.separator-title
-{
-    float: left;
-}
-
-.separator
-{
-    float: left;
-
-    width: 50px;
-    margin-top: 14px;
-}
-
-/* 合同生成表单end */
 
 /**************************************************
  *
@@ -872,6 +719,16 @@ button.table-submit
 }
 
 /* 列表风格end */
+
+/**************************************************
+ *
+ *
+ *
+ * 主页
+ *
+ *
+ *
+ **************************************************/
 
 /* 巨幕 */
 
