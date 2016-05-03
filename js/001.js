@@ -1,4 +1,8 @@
-for (var i=1; i<=8; i++)
+var section_num = 11;
+var datetimepicker_num = 8;
+
+
+for (var i=1; i<=datetimepicker_num; i++)
 {
 	$('#datetimepicker'+i).datetimepicker({
     	locale: 'zh-cn',
@@ -345,26 +349,119 @@ $('a[href="#sample-view"]').on('hidden.bs.tab', function (e) {
 	$('#sample-view').empty();
 })
 
+function setTime()
+{
+	var d=new Date();
+	var month=new Array(12);
+	month[0]="January";
+	month[1]="February";
+	month[2]="March";
+	month[3]="April";
+	month[4]="May";
+	month[5]="June";
+	month[6]="July";
+	month[7]="August";
+	month[8]="September";
+	month[9]="October";
+	month[10]="November";
+	month[11]="December";
 
-//设置侧边栏的宽度
+	var string = month[d.getMonth()]+' '+d.getDate()+', '+d.getHours()+':'+d.getMinutes();
+	$('#time').html(string);
+
+	setTimeout('setTime()',500);
+}
+
+function setProgress(tmpI)
+{
+	var percentage = Math.ceil(100/section_num*(tmpI));
+	if (tmpI == section_num)
+	{
+		percentage = 100;
+	}
+
+	$('div.progress-bar').attr('aria-valuenow', percentage);
+	$('div.progress-bar').text(percentage+'%');
+	$('div.progress-bar').css('width', percentage+'%');
+}
+
+function setPage(tmpI)
+{
+	for (var i=1; i<=section_num; i++)
+	{
+		if (tmpI == i)
+		{
+			$('#section-'+i).show();
+		}
+		else
+		{
+			$('#section-'+i).hide();
+		}
+	}
+
+	if (1 == tmpI)
+	{
+		$('button.prev').addClass("disabled");
+		$('button.next').removeClass("disabled");
+	}
+	else if (section_num == tmpI)
+	{
+		$('button.prev').removeClass("disabled");
+		$('button.next').addClass("disabled");
+	}
+	else
+	{
+		$('button.prev').removeClass("disabled");
+		$('button.next').removeClass("disabled");
+	}
+	setProgress(tmpI);
+}
+
+function setPrev()
+{
+	for (var i=1; i<=section_num; i++)
+	{
+		if($('#section-'+i).is(':visible'))
+		{
+			break;
+		}
+	}
+
+	if (i > 1)
+	{
+		setPage(i-1);
+	}
+}
+
+function setNext()
+{
+	for (var i=1; i<=section_num; i++)
+	{
+		if($('#section-'+i).is(':visible'))
+		{
+			break;
+		}
+	}
+
+	if (i < section_num)
+	{
+		setPage(i+1);
+	}
+}
+
+$('button.prev').click(function(event) {
+	setPrev();
+});
+
+$('button.next').click(function(event) {
+	setNext();
+});
+
 $(document).ready(function() {
-    $('#side-nav-bar').width($('#doc-create-view').width()/3);
+	setTime();
+	setPage(1);
 });
 
-$(window).resize(function() {
-    $('#side-nav-bar').width($('#doc-create-view').width()/3);
-});
 
-//侧边栏悬浮
-$(document).ready(function() {
-    $('#side-nav-bar').affix({
-        offset: {
-        	top: function () {
-        		return (this.bottom = $('nav').outerHeight(true))
-        	},
-        	bottom: function () {
-        		return (this.bottom = $('footer').outerHeight(true))
-        	}
-        }
-    });
-});
+
+

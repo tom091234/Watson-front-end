@@ -2,80 +2,64 @@
  *
  *
  *
- * side nav
+ * progress-bar
  *
  *
  *
  **************************************************/
-
-/* 侧边栏风格 */
-
-#side-nav-bar,
-#side-nav-bar a,
-#side-nav
+div.progress
 {
-    padding-right: 0;
-    padding-left: 0;
-
     -webkit-border-radius: 0;
        -moz-border-radius: 0;
             border-radius: 0;
 }
 
-.side-nav
+div.progress div.progress-bar
 {
-    /* 清除form-top-left的浮动 */
-    overflow: hidden;
-    /* padding部分，体现主题色 */
-
-    padding: 0;
-
-    text-align: center;
-    /* 下面左右2个圆角 */
+    background-color: #c0d23e;
 }
 
-.side-nav .navbar-toggle
-{
-    margin: 0;
-    padding: 10px;
 
-    border: none;
-    background-color: #202020;
+/**************************************************
+ *
+ *
+ *
+ * pagination
+ *
+ *
+ *
+ **************************************************/
+div.pagination
+{
+    margin-top: 10px;
 }
 
-.side-nav ul
+div.pagination button,
+div.pagination button:active,
+div.pagination button:focus,
+div.pagination button:hover
 {
-    background-color: #202020;
+    -webkit-border-radius: 0;
+       -moz-border-radius: 0;
+            border-radius: 0;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #c0d23e;
+    border: 2px solid #c0d23e;
 }
 
-#side-nav-bar
+div.pagination button.disabled,
+div.pagination button.disabled:active,
+div.pagination button.disabled:focus,
+div.pagination button.disabled:hover
 {
-    position: fixed;
+    color: #ccc;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    outline:0;
 }
-
-#side-nav-bar,
-#side-nav-bar button.navbar-toggle
-{
-    z-index: 999;
-
-    float: left;
-}
-
-#doc-create-view
-{
-    float: right;
-}
-
-/* 超小屏幕（手机，小于 768px） */
-@media (max-width: 767px)
-{
-    #doc-create-view
-    {
-        float: none;
-    }
-}
-
-/* 侧边栏风格end */
 
 /**************************************************
  *
@@ -92,14 +76,20 @@
 #questionnaire
 {
     margin-top: 0;
-    margin-bottom: 80px;
 }
 
-
-embed
+#questionnaire div.form-bottom
 {
-    width: 100%;
-    height: 1000px;
+    height: 470px;
+}
+
+/* 超小屏幕（手机，小于 768px） */
+@media (max-width: 768px)
+{
+    #questionnaire div.form-bottom
+    {
+        height: auto;
+    }
 }
 
 .nav-tabs
@@ -112,10 +102,6 @@ embed
     -webkit-border-radius: 0;
        -moz-border-radius: 0;
             border-radius: 0;
-}
-
-.nav-tabs > li > a
-{
     color: #000;
     border: 2px solid #202020;
 }
@@ -129,11 +115,6 @@ embed
     color: #fff;
     border: 2px solid #202020;
     background-color: #202020;
-}
-
-.section-box
-{
-    overflow: hidden;
 }
 
 .separator-title
@@ -151,9 +132,9 @@ embed
 
 div.section-box
 {
+    overflow: hidden;
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 14px;
 }
 
 /* 合同生成表单end */
@@ -171,15 +152,14 @@ div.section-box
 .a4-warpper
 {
     background-color: #530d85;
-    padding-top: 20px;
-    padding-bottom: 20px;
 }
 
 .a4-paper
 {
     margin: 0 auto;
     width: 21cm;
-    height: 29.7cm;
+    /*height: 29.7cm;*/
+    height: 641px;
     font-size: 14pt;
     line-height: 1.5;
     text-align: left;
@@ -216,6 +196,20 @@ div.section-box
     text-align: center;
     font-size: 28pt;
     font-weight: bold;
+}
+
+/* 超小屏幕（手机，小于 768px） */
+@media (max-width: 21cm)
+{
+    .a4-paper
+    {
+        width:100%;
+    }
+
+    .a4-margin
+    {
+        margin: 0;
+    }
 }
 
 
