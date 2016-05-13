@@ -468,10 +468,30 @@ $(document).ready(function() {
 	setPage(1);
 });
 
+function ReplaceCSS(text)
+{
+	var para_reg = new RegExp('class="para"','g');
+	var para_replace = 'style="font-size:14pt;line-height:1.5;text-indent:28pt;text-align:justify"';
+
+	var list_reg = new RegExp('class="list"','g');
+	var list_replace = 'style="font-size:14pt;line-height:1.5;padding-left:0.74cm;text-indent:-0.74cm;text-align:justify"';
+
+	var title_reg = new RegExp('class="title"','g');
+	var title_replace = 'style="font-size:28pt;font-weight:bold;line-height:1.5;text-align:center"';
+
+	text = text.replace(para_reg, para_replace);  
+	text = text.replace(list_reg, list_replace);  
+	text = text.replace(title_reg, title_replace);  
+
+	return text;
+}
+
 $('button[type="submit"]').click(function(event) {
 	preview_html();
 	var head = '<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"></head><body>';
-	$("<input hidden type='text' name='html' value='"+head+$('div.a4-margin').html()+"</body></html>'>").insertBefore(this);
+	var html = ReplaceCSS($('div.a4-margin').html());
+	//var html = $('div.a4-margin').html();
+	$("<input hidden type='text' name='html' value='"+head+html+"</body></html>'>").insertBefore(this);
 	$('#sample-view').empty();
 	if (("" != $('input[name="001-026"]').val())&&("" != $('input[name="001-027"]').val()))
 	{
