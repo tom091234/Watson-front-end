@@ -73,7 +73,7 @@ $(document).ready(function() {
 
 $('div.modal-footer button.btn-primary').click(function(event) {
     var start = $.fullCalendar.moment($('input[placeholder="开始时间"]').val(), 'YYYY年MM月DD日');
-    var end =$.fullCalendar.moment($('input[placeholder="结束时间"]').val().val(), 'YYYY年MM月DD日');
+    var end = $.fullCalendar.moment($('input[placeholder="结束时间"]').val(), 'YYYY年MM月DD日');
     end.add(1, 'day');
 
     if ('' == $('input[name="id"]').val())
@@ -89,7 +89,8 @@ $('div.modal-footer button.btn-primary').click(function(event) {
                 title:  $('textarea[placeholder="事件说明"]').val(),
                 start:  start.format('YYYY-MM-DD'),
                 end:    end.format('YYYY-MM-DD'),
-                backgroundColor:  'rgb('+r+','+g+','+b+')'
+                backgroundColor:  'rgb('+r+','+g+','+b+')',
+                ref:    $('select[name="ref"]').val()
             },
             function (data, textStatus, jqXHR){
                 alert($(this).parents('tr').children('td:eq(0)').text()+'被成功删除');
@@ -105,6 +106,7 @@ $('div.modal-footer button.btn-primary').click(function(event) {
                 title:  $('textarea[placeholder="事件说明"]').val(),
                 start:  start.format('YYYY-MM-DD'),
                 end:    end.format('YYYY-MM-DD'),
+                ref:    $('select[name="ref"]').val()
             },
             function (data, textStatus, jqXHR){
                 alert($(this).parents('tr').children('td:eq(0)').text()+'被成功删除');
@@ -183,7 +185,12 @@ function setPage(tmp_page)
         }
     }
 
-    if (1 == tmp_page)
+    if (1 >= max_page_num)
+    {
+        $('button.prev').addClass("disabled");
+        $('button.next').addClass("disabled");
+    }
+    else if (1 == tmp_page)
     {
         $('button.prev').addClass("disabled");
         $('button.next').removeClass("disabled");
@@ -199,7 +206,14 @@ function setPage(tmp_page)
         $('button.next').removeClass("disabled");
     }
 
-    $('table.info caption').text('您共有'+max_row_num+'份合同，显示第'+(min_row+1)+'-'+max_row+'份合同...');
+    if (0 == max_row_num)
+    {
+        $('table.info caption').text('您共有'+max_row_num+'份合同');
+    }
+    else
+    {
+        $('table.info caption').text('您共有'+max_row_num+'份合同，显示第'+(min_row+1)+'-'+max_row+'份合同...');
+    }
 }
 
 function setPrev()
@@ -300,5 +314,51 @@ $('table.info tbody select[name="status"]').each(function(index, el) {
                 alert($(this).parents('tr').children('td:eq(0)').text()+'被成功删除');
             });
     });
+});
+
+$('button.search_btn').click(function(event) {
+    var search_text=$('input[type="search"]').val();
+
+    if ('' == search_text)
+    {
+        //显示所有合同
+        setPage(1);
+    }
+    else
+    {
+        $('table.table.info tbody').children().each(function(index, el) {
+            var id      = $(this).children('td:eq(0)').text();
+            var name    = $(this).find('input[name="name"]').val();
+            var type    = $(this).children('td:eq(2)').text();
+            var state   = $(this).children('td:eq(3)').text();
+            var status  = $(this).find('select').val();
+            var tag     = $(this).find('input[name="lable"]').val();
+
+            if ((id.match(search_text)) ||
+                (name.match(search_text)) ||
+                (type.match(search_text)) ||
+                (state.match(search_text)) ||
+                (status.match(search_text)) ||
+                (tag.match(search_text))
+                )
+            {
+                $(this).show();
+            }
+            else
+            {
+                $(this).hide();
+            }
+        });
+        $('button.prev').addClass("disabled");
+        $('button.next').addClass("disabled");
+        $('caption').text("");
+    }
+});
+
+$('input[type="search"]').keypress(function(event) {
+    if (13 == event.keyCode)
+    {
+        $('button.search_btn').click();
+    }
 });
 

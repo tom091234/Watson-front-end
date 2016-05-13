@@ -5,8 +5,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>主页</title>
-    <meta name="description" content="有娱-主页">
+	<title>关于我们</title>
+    <meta name="description" content="有娱-关于我们">
     <meta name="author" content="xiao kai, peng">
 
     <!-- 导入Roboto字体
@@ -16,15 +16,16 @@
 
 	<link href="https://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 	<link href="https://cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../static/css/style.css">
+	<link rel="stylesheet" href="../static/css/about.css">
 
     <!-- 加载各种icon -->
-    <link rel="icon" href="../img/logo.ico">
-    <link rel="shortcut icon" href="../img/logo.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../img/logo.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../img/logo.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../img/logo.ico">
-    <link rel="apple-touch-icon-precomposed" href="../img/logo.ico">
+    <link rel="icon" href="../static/img/logo.ico">
+    <link rel="shortcut icon" href="../static/img/logo.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../static/img/logo.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../static/img/logo.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../static/img/logo.ico">
+    <link rel="apple-touch-icon-precomposed" href="../static/img/logo.ico">
 
 
 </head>
@@ -35,7 +36,7 @@
 		<nav role="navigation" class="navbar navbar-static-top">
 			<div class="container">
 				<a class="brand" href="#">
-					<img alt="Brand" src="../img/logo.ico">
+					<img alt="Brand" src="../static/img/logo.ico">
 				</a>
 
 				<div class="navbar-header">
@@ -70,7 +71,7 @@
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
 								用户名
-								<img src="../img/avatar.jpg" class="avatar">
+								<img src="../static/img/avatar.jpg" class="avatar">
 								<span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu">
@@ -84,94 +85,48 @@
 				</div>
 			</div>
 		</nav>
-
-		<div class="jumbotron">
-			<div class="container">
-			<h1>添加介绍</h1>
-			<p>...</p>
-			</div>
-		</div>
 	</header>
 
-	<main>
+	<main class="body-wrapper">
 		<div class="container">
-			<!-- 幻灯片 -->
-			<div id="carousel" class="carousel slide" data-ride="carousel">
-				<!-- Indicators -->
-				<ol class="carousel-indicators">
-					<li data-target="#carousel" data-slide-to="0" class="active"></li>
-					<li data-target="#carousel" data-slide-to="1"></li>
-				</ol>
-
-				<!-- Wrapper for slides -->
-				<div class="carousel-inner" role="listbox">
-					<div class="item active">
-						<img src="../img/jumbotron.jpg" alt="...">
-						<div class="carousel-caption">
-							<h3>巨幕1</h3>
-							<p>...</p>
+			<div class="row">
+				<div class="col-sm-3">
+					<ul class="nav nav-tabs nav-pills nav-stacked" role="tablist">
+						<li role="presentation" class="active"><a href="#section-1" aria-controls="section-1" role="tab" data-toggle="tab">关于我们</a></li>
+						<li role="presentation"><a href="#section-2" aria-controls="section-2" role="tab" data-toggle="tab">商务合作</a></li>
+						<li role="presentation"><a href="#section-3" aria-controls="section-3" role="tab" data-toggle="tab">免责声明</a></li>
+						<li role="presentation"><a href="#section-4" aria-controls="section-4" role="tab" data-toggle="tab">联系我们</a></li>
+						<li role="presentation"><a href="#section-5" aria-controls="section-5" role="tab" data-toggle="tab">帮助</a></li>
+					</ul>
+				</div>
+				<div id="about" class="col-sm-9">
+					<div class="tab-content">
+						<div role="tabpanel" class="tab-pane fade in active" id="section-1">
+							<fieldset>
+								<legend>关于我们</legend>
+							</fieldset>
+						</div>
+						<div role="tabpanel" class="tab-pane fade" id="section-2">
+							<fieldset>
+								<legend>商务合作</legend>
+							</fieldset>
+						</div>
+						<div role="tabpanel" class="tab-pane fade" id="section-3">
+							<fieldset>
+								<legend>免责声明</legend>
+							</fieldset>
+						</div>
+						<div role="tabpanel" class="tab-pane fade" id="section-4">
+							<fieldset>
+								<legend>联系我们</legend>
+							</fieldset>
+						</div>
+						<div role="tabpanel" class="tab-pane fade" id="section-5">
+							<fieldset>
+								<legend>帮助</legend>
+							</fieldset>
 						</div>
 					</div>
-					<div class="item">
-						<img src="../img/jumbotron.jpg" alt="...">
-						<div class="carousel-caption">
-							<h3>巨幕2</h3>
-							<p>...</p>
-						</div>
-					</div>
-				</div>
-
-				<!-- Controls -->
-				<a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
-					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-					<span class="sr-only">前一个介绍</span>
-				</a>
-				<a class="right carousel-control" href="#carousel" role="button" data-slide="next">
-					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-					<span class="sr-only">后一个介绍</span>
-				</a>
-			</div>
-
-			<div class="row thumbnail-wrapper">
-				<div class="col-sm-12">
-					<h2>合同列表</h2>
-					<a href="#" class="more s-btn">更多</a>
-				</div>
-				<div class="col-sm-3">
-					<a href="#" class="thumbnail">
-						<i class="fa fa-book"></i>
-						<div class="caption">
-							<h4>文学作品改编许可合同</h4>
-							<p>...</p>
-						</div>
-					</a>
-				</div>
-				<div class="col-sm-3">
-					<a href="#" class="thumbnail">
-						<i class="fa fa-rmb"></i>
-						<div class="caption">
-							<h4>电影联合投资摄制合同</h4>
-							<p>...</p>
-						</div>
-					</a>
-				</div>
-				<div class="col-sm-3">
-					<a href="#" class="thumbnail">
-						<i class="fa fa-male"></i>
-						<div class="caption">
-							<h4>演员聘用合同</h4>
-							<p>...</p>
-						</div>
-					</a>
-				</div>
-				<div class="col-sm-3">
-					<a href="#" class="thumbnail">
-						<i class="fa fa-camera"></i>
-						<div class="caption">
-							<h4>器材设备租赁合同</h4>
-							<p>...</p>
-						</div>
-					</a>
 				</div>
 			</div>
 		</div>
@@ -214,6 +169,7 @@
 	<!-- 加载JS -->
 	<script src="https://cdn.bootcss.com/jquery/1.12.1/jquery.min.js"></script>
 	<script src="https://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	<script src="../js/script.js"></script>
+	<script src="../static/js/script.js"></script>
 </body>
 </html>
+

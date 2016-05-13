@@ -21,7 +21,24 @@ fieldset legend
 	border: 0;
 }
 
+
+input[type="file"]
+{
+    background-color: #fff;
+}
+
+#start_upload,
 button[type="submit"]
 {
 	margin-top: 20px;
+}
+
+#preview img
+{
+	background-color: #fff;
+}
+
+div.alert
+{
+    border-radius: 0;
 }
