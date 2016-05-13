@@ -470,9 +470,9 @@ $(document).ready(function() {
 
 $('button[type="submit"]').click(function(event) {
 	preview_html();
-	$("<input hidden type='text' name='html' value='"+$('div.a4-margin').html()+"'>").insertBefore(this);
+	var head = '<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"></head><body>';
+	$("<input hidden type='text' name='html' value='"+head+$('div.a4-margin').html()+"</body></html>'>").insertBefore(this);
 	$('#sample-view').empty();
-
 	if (("" != $('input[name="001-026"]').val())&&("" != $('input[name="001-027"]').val()))
 	{
 	    var start = moment($('input[name="001-026"]').val(), 'YYYY年MM月DD日');
@@ -490,4 +490,9 @@ $('button[type="submit"]').click(function(event) {
 	    tmpStr = tmpStr + '"rgb('+r+','+g+','+b+')"';
 		$("<input hidden type='text' name='event1' value='"+tmpStr+"'>").insertBefore(this);
 	}
+});
+
+$("form").submit(function(e){
+    e.preventDefault();
+    alert("Submit prevented");
 });
