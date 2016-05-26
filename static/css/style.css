@@ -172,6 +172,7 @@ a
     border-bottom: 1px solid #c0d23e;
     color: #c0d23e;
     font-weight: 700;
+    text-decoration: none;
 }
 
 a:hover,
@@ -179,6 +180,7 @@ a:focus
 {
     border-bottom: 1px solid #530d85;
     color: #530d85;
+    text-decoration: none;
 }
 
 /* 默认链接风格end */
@@ -362,6 +364,7 @@ nav.navbar a:focus
 
     color: #fff;
     background-color: #c0d23e;
+     border-bottom: 0;
 }
 
 /**************************************************
@@ -565,7 +568,7 @@ footer ul.info li a:focus
 .form-bottom
 {
     /* 清除form-top-left的浮动 */
-    overflow: hidden;
+    overflow: visible;
     /* padding部分，体现主题色 */
 
     padding: 25px 25px 30px 25px;
