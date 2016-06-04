@@ -39,20 +39,10 @@ $(document).ready(function() {
 	      }
 	    },
         submitHandler:function(form){
-        	if ($('form button[type="submit"]').is('.disabled'))
-        	{
-        	}
-        	else
-        	{
-	            form.submit();
-        	}
+            form.submit();
         },
         errorClass:'input-error',
-        validClass:'input-valid',
-		errorPlacement: function(error, element) {  
-		    var index = error.appendTo(element.parent());
-		    $(index).removeClass('input-error');
-		}
+        validClass:'input-valid'
 	});
 });
 
