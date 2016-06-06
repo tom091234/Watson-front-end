@@ -50,24 +50,7 @@ $(document).ready(function() {
             $('#add-event').modal();
         },
 
-        events: [
-            {
-                id     : 1,
-                title  : 'aaa',
-                start  : '2016-04-25',
-                end    : '2016-04-27',
-                backgroundColor:'rgb(79,246,6)',
-                ref    :20
-            },
-            {
-                id     : 2,
-                title  : 'bbb',
-                start  : '2016-04-26',
-                end    : '2016-04-28',
-                backgroundColor:'rgb(255,0,0)',
-                ref    :30
-            }
-        ]
+        events: '/calendar/events/'
     })
 });
 
