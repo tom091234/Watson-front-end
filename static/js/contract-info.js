@@ -134,6 +134,7 @@ $('div.modal-footer button.btn-danger').click(function(event) {
 
 $('a[href="#calendar-view"]').on('shown.bs.tab', function (e) {
 	$('#calendar').fullCalendar('render');
+    $('#calendar').fullCalendar('refetchEvents');
 })
 
 for (var i=1; i<=2; i++)
