@@ -1,12 +1,16 @@
 
 //table中select颜色随选项变化
 $(document).ready(function() {
-    $('table select').css("background-color",$(this).find("option:selected").css("background-color"));
+    $('table select').each(function(index, el) {
+        $(this).css("background-color",$(this).find("option:selected").css("background-color"));
+    });
 });
 
 $(document).ready(function() {
-    $('table select').change(function() {
-        $(this).css("background-color",$(this).find("option:selected").css("background-color"));
+    $('table select').each(function(index, el) {
+        $(this).change(function() {
+            $(this).css("background-color",$(this).find("option:selected").css("background-color"));
+        });
     });
 });
 
