@@ -245,6 +245,7 @@ $('table.info tbody button.delivery').each(function(index, el) {
             },
             function (data, textStatus, jqXHR){
                 alert($(this).parents('tr').children('td:eq(0)').text()+'提交审核成功');
+                window.location.reload();
             });
     });
 });
