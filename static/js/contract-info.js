@@ -14,6 +14,12 @@ $(document).ready(function() {
     });
 });
 
+//处理合同列表中的时间格式
+$('table tbody tr td:nth-child(4)').each(function(index, el) {
+    var date = date = $.fullCalendar.moment($(this).text(), 'YYYY-MM-DD');
+    $(this).text(date.format('YYYY年MM月DD日'));
+});
+
 //calendar配置
 $(document).ready(function() {
     $('#calendar').fullCalendar({
@@ -33,7 +39,7 @@ $(document).ready(function() {
                 $('input[placeholder="开始时间"]').val(date.format('YYYY年MM月DD日'));
                 $('input[placeholder="结束时间"]').val(date.format('YYYY年MM月DD日'));
                 $('input[name="backgroundColor"]').val('');
-                $('select[name="ref"]').val('');
+                MakeRefOptSel(null);
                 $('button.btn-danger').hide();
             });
             $('#add-event').modal();
@@ -48,7 +54,7 @@ $(document).ready(function() {
                 $('input[placeholder="结束时间"]').val(calEvent.end.add(-1, 'day').format('YYYY年MM月DD日'));
                 calEvent.end.add(1, 'day');
                 $('input[name="backgroundColor"]').val(calEvent.backgroundColor);
-                $('select[name="ref"]').val(calEvent.ref);
+                MakeRefOptSel(calEvent.ref);
                 $('button.btn-danger').show();
             });
             $('#add-event').modal();
@@ -80,6 +86,7 @@ $('div.modal-footer button.btn-primary').click(function(event) {
                 ref:    $('select[name="ref"]').val()
             },
             function (data, textStatus, jqXHR){
+                $('#calendar').fullCalendar('refetchEvents'); //重新获取所有事件数据
                 alert($(this).parents('tr').children('td:eq(0)').text()+'被成功删除');
             });
     }
@@ -96,12 +103,12 @@ $('div.modal-footer button.btn-primary').click(function(event) {
                 ref:    $('select[name="ref"]').val()
             },
             function (data, textStatus, jqXHR){
+                $('#calendar').fullCalendar('refetchEvents'); //重新获取所有事件数据
                 alert($(this).parents('tr').children('td:eq(0)').text()+'被成功删除');
             });
     }
 
     $('#add-event').modal('hide');
-    $('#calendar').fullCalendar('refetchEvents'); //重新获取所有事件数据
 });
 
 $('div.modal-footer button.btn-danger').click(function(event) {
@@ -112,11 +119,11 @@ $('div.modal-footer button.btn-danger').click(function(event) {
             id:     $('input[name="id"]').val()
         },
         function (data, textStatus, jqXHR){
+            $('#calendar').fullCalendar('refetchEvents'); //重新获取所有事件数据
             alert($(this).parents('tr').children('td:eq(0)').text()+'被成功删除');
         });
 
     $('#add-event').modal('hide');
-    $('#calendar').fullCalendar('refetchEvents'); //重新获取所有事件数据
 });
 
 $('a[href="#calendar-view"]').on('shown.bs.tab', function (e) {
@@ -148,6 +155,20 @@ function MakeRefOpt()
 
         $('<option value="'+value+'">'+text+'</option>').appendTo($('select[name="ref"]'));
     }
+}
+
+function MakeRefOptSel(value)
+{
+    $('select[name="ref"] option').each(function(index, el) {
+        if ($(this).val() == value)
+        {
+            $(this).attr("selected",true);
+        }
+        else
+        {
+            $(this).attr("selected",false);
+        }
+    });
 }
 
 function setPage(tmp_page)
