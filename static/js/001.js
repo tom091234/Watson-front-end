@@ -512,10 +512,10 @@ $('button[type="submit"]').click(function(event) {
 	}
 });
 
-$("form").submit(function(e){
+/*$("form").submit(function(e){
     e.preventDefault();
     alert("Submit prevented");
-});
+});*/
 
 $(document).ready(function() {
 	$('#001').validate({

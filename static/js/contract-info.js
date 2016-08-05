@@ -77,7 +77,7 @@ $('div.modal-footer button.btn-primary').click(function(event) {
 
         //新建事件
         jQuery.post(
-            'url', 
+            '/calendar/new/', 
             {
                 title:  $('textarea[placeholder="事件说明"]').val(),
                 start:  start.format('YYYY-MM-DD'),
@@ -87,14 +87,14 @@ $('div.modal-footer button.btn-primary').click(function(event) {
             },
             function (data, textStatus, jqXHR){
                 $('#calendar').fullCalendar('refetchEvents'); //重新获取所有事件数据
-                alert($(this).parents('tr').children('td:eq(0)').text()+'被成功删除');
+                alert($(this).parents('tr').children('td:eq(0)').text()+'添加成功');
             });
     }
     else
     {
         //修改事件
         jQuery.post(
-            'url', 
+            '/calendar/edit/', 
             {
                 id:     $('input[name="id"]').val(),
                 title:  $('textarea[placeholder="事件说明"]').val(),
@@ -104,7 +104,7 @@ $('div.modal-footer button.btn-primary').click(function(event) {
             },
             function (data, textStatus, jqXHR){
                 $('#calendar').fullCalendar('refetchEvents'); //重新获取所有事件数据
-                alert($(this).parents('tr').children('td:eq(0)').text()+'被成功删除');
+                alert($(this).parents('tr').children('td:eq(0)').text()+'修改成功');
             });
     }
 
@@ -114,13 +114,13 @@ $('div.modal-footer button.btn-primary').click(function(event) {
 $('div.modal-footer button.btn-danger').click(function(event) {
     //删除事件
     jQuery.post(
-        'url', 
+        '/calendar/delete/', 
         {
             id:     $('input[name="id"]').val()
         },
         function (data, textStatus, jqXHR){
             $('#calendar').fullCalendar('refetchEvents'); //重新获取所有事件数据
-            alert($(this).parents('tr').children('td:eq(0)').text()+'被成功删除');
+            alert($(this).parents('tr').children('td:eq(0)').text()+'删除成功');
         });
 
     $('#add-event').modal('hide');
@@ -261,7 +261,7 @@ $('table.info tbody button.delivery').each(function(index, el) {
     $(this).click(function(event) {
         //提交审核
         jQuery.post(
-            'url', 
+            '/contract/for-review/', 
             {
                 id:$(this).parents('tr').children('td:eq(0)').text()
             },
@@ -276,7 +276,7 @@ $('table.info tbody button.delete').each(function(index, el) {
     $(this).click(function(event) {
         //删除合同
         jQuery.post(
-            'url', 
+            '/contract/delete/', 
             {
                 id:$(this).parents('tr').children('td:eq(0)').text()
             },
@@ -296,17 +296,17 @@ $('table.info tbody button.delete').each(function(index, el) {
     });
 });
 
-$('table.info tbody input[name="lable"]').each(function(index, el) {
+$('table.info tbody input[name="label"]').each(function(index, el) {
     $(this).change(function(event) {
-        //修改lable
+        //修改label
         jQuery.post(
-            'url', 
+            '/contract/label/', 
             {
                 id:$(this).parents('tr').children('td:eq(0)').text(),
-                lable:$(this).val()
+                label:$(this).val()
             },
             function (data, textStatus, jqXHR){
-                alert($(this).parents('tr').children('td:eq(0)').text()+'被成功删除');
+                alert($(this).parents('tr').children('td:eq(0)').text()+'标签已更新');
             });
     });
 });
@@ -315,13 +315,13 @@ $('table.info tbody input[name="name"]').each(function(index, el) {
     $(this).change(function(event) {
         //修改name
         jQuery.post(
-            'url', 
+            '/contract/update-name/', 
             {
                 id:$(this).parents('tr').children('td:eq(0)').text(),
                 name:$(this).val()
             },
             function (data, textStatus, jqXHR){
-                alert($(this).parents('tr').children('td:eq(0)').text()+'被成功删除');
+                alert($(this).parents('tr').children('td:eq(0)').text()+'合同名称修改成功');
             });
     });
 });
@@ -330,13 +330,13 @@ $('table.info tbody select[name="status"]').each(function(index, el) {
     $(this).change(function(event) {
         //修改status
         jQuery.post(
-            'url', 
+            '/contract/update-law-status/', 
             {
                 id:$(this).parents('tr').children('td:eq(0)').text(),
                 status:$(this).val()
             },
             function (data, textStatus, jqXHR){
-                alert($(this).parents('tr').children('td:eq(0)').text()+'被成功删除');
+                alert($(this).parents('tr').children('td:eq(0)').text()+'法律状态已修改');
             });
     });
 });

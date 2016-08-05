@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	var uploader = new plupload.Uploader({ //实例化一个plupload上传对象
 		browse_button : 'browse',
-		url : 'url',
+		url : '/upload-user-image/',
 		flash_swf_url : 'https://cdn.bootcss.com/plupload/2.1.7/Moxie.swf',
 		filters : {
 			mime_types : [
@@ -115,18 +115,18 @@ $(document).ready(function() {
 
 	$('#user-info').validate({
 	    rules: {
-	      'mobile': {
+	      'phonenumber': {
 	        isMobile: true
 	      },
-	      'company-email': {
+	      'companyemail': {
 	        email: true
 	      }
 	    },
 	    messages: {
-	      'mobile': {
+	      'phonenumber': {
 	        isMobile: '请正确填写您的手机号码'
 	      },
-	      'company-email': {
+	      'companyemail': {
 	        email: '请输入一个合法的邮箱地址'
 	      }
 	    },
