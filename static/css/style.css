@@ -908,24 +908,6 @@ form textarea.form-control::-webkit-input-placeholder
     height: 500px;
 }
 
-.carousel .item1
-{
-    background-image: url(../img/slide1.jpg);
-    background-position: center;
-}
-
-.carousel .item2
-{
-    background-image: url(../img/slide2.jpg);
-    background-position: center;
-}
-
-.carousel .item3
-{
-    background-image: url(../img/slide3.jpg);
-    background-position: center;
-}
-
 .carousel-caption
 {
     background-color: rgba(83, 13, 133, 0.5);
