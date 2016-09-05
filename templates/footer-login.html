@@ -5,8 +5,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>footer</title>
-    <meta name="description" content="有娱-footer">
+	<title>生成向导</title>
+    <meta name="description" content="有娱-生成向导">
     <meta name="author" content="xiao kai, peng">
 
     <!-- 导入Roboto字体
@@ -25,10 +25,15 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../static/img/logo.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../static/img/logo.png">
     <link rel="apple-touch-icon-precomposed" href="../static/img/logo.png">
+
+
 </head>
 
 <body>
-    <footer>
+	<!-- 移动端底部导航平分为4个区域，其中第3个区域根据页面不同显示不同的内容，具体内容详见对应页面
+	拆分时可以把底部导航和footer放在一起，这样后端不用区分客户端类型，原有的footer.html可以废弃 -->
+
+    <footer class="visible-lg-block">
         <div class="container">
             <div class="footer-border"></div>
             <div class="row">
@@ -74,6 +79,35 @@
             </div>
         </div>
     </footer>
+
+    <nav role="navigation" id="bottom-nav" class="navbar navbar-fixed-bottom hidden-lg">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-3">
+                    <a href="./index.html">首页</a>
+                </div>
+                <div class="col-xs-3">
+                    <a href="./contract-guider.html">生成</a>
+                </div>
+                <div class="col-xs-3">
+                    <p> </p>
+                </div>
+                <div class="col-xs-3">
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            我的
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="./user-info.html">个人资料</a></li>
+                            <li><a href="./contract-info.html">我的合同</a></li>
+                            <li><a href="#">退出登录</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
 
 	<!-- 加载JS -->
 	<script src="https://cdn.bootcss.com/jquery/1.12.1/jquery.min.js"></script>

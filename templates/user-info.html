@@ -31,7 +31,7 @@
 </head>
 
 <body>
-	<header>
+    <header class="visible-lg-block">
 		<!-- 置顶导航 -->
 		<nav role="navigation" class="navbar navbar-static-top">
 			<div class="container">
@@ -90,7 +90,7 @@
 	<main class="body-wrapper">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-3">
+				<div class="col-sm-3 visible-lg-block">
 					<ul class="nav nav-tabs nav-pills nav-stacked" role="tablist">
 						<li role="presentation" class="active"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">账号信息</a></li>
 						<li role="presentation"><a href="#information" aria-controls="information" role="tab" data-toggle="tab">用户信息</a></li>
@@ -342,7 +342,7 @@
 		</div>
 	</main>
 
-	<footer>
+    <footer class="visible-lg-block">
 		<div class="container">
 			<div class="footer-border"></div>
 			<div class="row">
@@ -389,12 +389,57 @@
 		</div>
 	</footer>
 
-	<!-- 返回顶部悬浮按钮 -->
-	<span id="top-link-block" class="hidden">
-	    <a href="#top" class="well well-sm" onclick="$('html,body').animate({scrollTop:0},'fast');return false;">
-	        <i class="fa fa-arrow-up"></i>返回顶部
-	    </a>
-	</span>
+    <nav role="navigation" id="bottom-nav" class="navbar navbar-fixed-bottom hidden-lg">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-3">
+                    <a href="./index.html">首页</a>
+                </div>
+                <div class="col-xs-3">
+                    <a href="./contract-guider.html">生成</a>
+                </div>
+                <div class="col-xs-3">
+                   <div class="dropdown" id="tab">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            账号信息
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+								<ul class="nav nav-tabs nav-pills nav-stacked" role="tablist">
+									<li role="presentation" class="active"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">账号信息</a></li>
+									<li role="presentation"><a href="#information" aria-controls="information" role="tab" data-toggle="tab">用户信息</a></li>
+									<li role="presentation"><a href="#avatar" aria-controls="avatar" role="tab" data-toggle="tab">修改头像</a></li>
+									<li role="presentation"><a href="#password" aria-controls="password" role="tab" data-toggle="tab">修改密码</a></li>
+								</ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            我的
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="./user-info.html">个人资料</a></li>
+                            <li><a href="./contract-info.html">我的合同</a></li>
+                            <li><a href="#">退出登录</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- 返回顶部悬浮按钮 -->
+    <span id="top-link-block" class="hidden visible-lg-block">
+        <a href="#top" class="well well-sm" onclick="$('html,body').animate({scrollTop:0},'fast');return false;">
+            <i class="fa fa-arrow-up"></i>返回顶部
+        </a>
+    </span>
 
 	<!-- 加载JS -->
 	<script src="https://cdn.bootcss.com/jquery/1.12.1/jquery.min.js"></script>
